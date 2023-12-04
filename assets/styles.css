@@ -1,0 +1,29 @@
+html, body {
+    height: 100%;
+    width: 100%;
+}
+body {
+    display: flex;
+    flex-direction: column;
+
+}
+header .bodyContent {
+    align-items: center;
+    justify-content: center;
+    min-height: initial;
+    overflow: hidden;
+}
+.start {
+    flex: 0 0 auto;
+    margin-right: 40px;
+    justify-content: start;
+    padding-right: 0;
+    gap: 40px;
+}
+.header-section{
+display: flex;
+flex-direction: row;
+height: 100%;
+align-items: center;
+padding: 0 60px;
+}
