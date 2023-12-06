@@ -158,3 +158,27 @@ order: 1;
           min-width: 196px;
         }
       }
+
+     /* iPhone Carousel Styles */
+.iphone-carousel {
+    width: 300px; /* Width of an iPhone 11 */
+    height: 500px; /* Height of an iPhone 11 */
+    margin: auto;
+    overflow: hidden;
+    border-radius: 30px;
+    border: 5px solid #000;
+    position: relative;
+    background: #fff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Adjust carousel size */
+  #carouselExampleFade {
+    width: 100%;
+    height: 100%;
+  }
+  
+  /* Hide carousel controls */
+  .carousel-control-prev, .carousel-control-next {
+    display: none;
+  }
