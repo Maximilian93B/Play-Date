@@ -50,16 +50,27 @@
                 <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
                 <div id="emailHelp" class="form-text">Enter the number of people your activity is for.</div>
             </div>
-            <div class="dropdown">
+
+            <fieldset>
+                <legend>What is Your Favorite Pet?</legend>
+                <input type='checkbox' name='favorite_pet' value='Cats'>Cats<br>
+                <input type='checkbox' name='favorite_pet' value='Dogs'>Dogs<br>
+                <input type='checkbox' name='favorite_pet' value='Birds'>Birds<br>
+                <br>
+
+            </fieldset>
+
+
+            <!--<div class="dropdown">
                 <label for="activities">Activity Types</label>
-                <select name="activityIntrests[]" id="activities" required>
+                <select name="activityIntrests[]" id="activities" multiple required>
                     <option value="1" class="checkbox">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
                     <option value="4">4</option>
                 </select>
-            </div>
-            <!-- <div class="mb-3 form-check">
+            </div> 
+             <div class="mb-3 form-check">
                 <input type="checkbox" class="form-check-input" id="exampleCheck1">
                 <label class="form-check-label" for="exampleCheck1">Check me out</label>
             </div> -->
