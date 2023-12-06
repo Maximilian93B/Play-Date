@@ -59,7 +59,7 @@ header {
     flex-direction: column;
     align-items: center;
     max-width: 1200px;
-    margin: 20px auto;
+    margin: 15% auto;
     margin-right: 0 auto;
     padding: 20px;
 }
@@ -87,12 +87,12 @@ header {
     font-weight: 400;
 }
 
-/* Styles for the right text */
+
 .wrapper .right-text {
     color: #fff;
     font-size: 96px;
     font-weight: 400;
-    animation-delay: 2s; /* Adjust this delay as needed */
+    animation-delay: 2s; 
 }
 
   .wrapper .dynamic-txts{
@@ -206,24 +206,34 @@ header {
     }
 }
 
-.container.inputForm {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start; 
-    height: 100vh; 
+
+    
+.content-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
+/* Add a box around the inputForm */
+.form-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 30px ;
+    border: 2px solid #f4f4f6;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #fbffff;
+}
 
-.inputForm {
-    width: 80%;
-    max-width: 600px; /* Set a maximum width */
-    margin: 50px auto; /* Center the form horizontally */
-    display: none; /* initially hide the form */
+/* Style for the inputForm */
+.container.inputForm {
+    width: 100%;
 }
 
 /* Media query for smaller screens */
 @media (max-width: 768px) {
-    .inputForm {
+    .form-container {
         width: 90%;
     }
 }
