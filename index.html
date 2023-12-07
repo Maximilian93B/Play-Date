@@ -1,21 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Play Date: Where Plans Meet Play</title>
     <link rel="stylesheet" href="./assets/styles.css" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     
 </head>
+
 <body>
     <header>
         <div class="bodyContent">
             <div class="header-section start">
-                <a class="header-navCTA " href="/About" >About</a>
+                <a class="header-navCTA " href="/About">About</a>
                 <a class="header-navCTA " href="/contact">Contact</a>
                 <a class="header-navCTA " href="/Developers">Developers</a>
             </div>
@@ -32,22 +36,41 @@
             </div>
         </div>
     </header>
-    
+
     <main>
-        <div class = "main-container">
-            <!--Responsive design centered in the middle of the page -->
-            <div class="centered-design">
-                <!-- Design content will go here-->
-            </div>
-        
+        <main>
+            <div class="main-container">
+                <div class="phone-slideshow">
+                    <div class="screen-mask">
+                      <ul class="phone-slideshow-list">
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                      </ul>
+                    </div>
+                  </div>
+                
+                
+    
             <div class="flex-container">
                 <div class="flex-container">
-                    <!-- Left side text with animation -->
-                    <div class="left-text left-text-animation">Where Plans</div>
-                
-                    <!-- Right side text with animation -->
-                    <div class="right-text right-text-animation">Meet Play</div>
-                </div>             
+                    <div class="wrapper">
+                        <ul class="dynamic-txts">
+                            <li><span>Where Plans</span></li>
+                        </ul>
+                    </div>
+                    <div class="wrapper">
+                        <ul class="dynamic-txts">
+                            <li><span>Meet Play</span></li>
+                        </ul>
+                    </div>
+                </div>
             </div>
 
             <div class="corner-icons">
@@ -57,58 +80,170 @@
             <div class="get-started-button">
                 <!-- App Description -->
                 <div class="app-description">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius voluptatibus pariatur aspernatur illum quisquam animi!</p>
+                    <p> Unleash fun with spontaneous plans. Connect, explore, and create unforgettable moments in your city. Get started today!"</p>
                 </div>
-                
                 <!-- Start Button -->
                 <button class="button-63">Get Started</button>
             </div>
-            
         </div>
+        <section class="container inputForm">
+            <form>
+                <div class="mb-3">
+                    <h2>Define what we're looking for!</h2>
+                    <!-- Location input goes here -->
+                </div>
+                <div class="mb-3">
+                    <label for="numPeopleInput" class="form-label">Enter Number of People</label>
+                    <!-- Number of People input goes here -->
+                </div>
 
-<!--
-        <div class="iphone-carousel">
-            <div id="carouselExampleFade" class="carousel slide carousel-fade">
-              <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <img src="assets\images\bay-of-fundy.jpg" class="d-block w-100" alt="Image 1">
-                </div>
-                <div class="carousel-item">
-                  <img src="assets\images\Magic-Mountain-Water-Park.jpg" class="d-block w-100" alt="Image 2">
-                </div>
-                <div class="carousel-item">
-                  <img src="assets\images\magnetic-hill.jpg" class="d-block w-100" alt="Image 3">
-                </div>
-              </div>
+                <fieldset>
+                    <h2>What type of activity interests you? <br><span class="additionalText">(you can select more
+                            than
+                            one)</span></h2>
+                    <div class="row">
+                        <!-- First column of option checkboxes -->
+                        <div class="col-md-4 ">
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input" name="favoriteActivity" id="walkHike"
+                                    value="walkHike">
+                                <label class="form-check-label" for="walkHike">Walk or Hike</label>
+                            </div>
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input" name="favoriteActivity" id="swim"
+                                    value="swim">
+                                <label class="form-check-label" for="swim">Swimming</label>
+                            </div>
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input" name="favoriteActivity" id="artsCrafts"
+                                    value="artsCrafts">
+                                <label class="form-check-label" for="artsCrafts">Arts & Crafts</label>
+                            </div>
+                        </div>
+
+                        <!-- Second column of option checkboxes -->
+                        <div class="col-md-4 borderLeft">
+                            <!-- Duplicate and modify the following lines for the next three checkboxes -->
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input" name="favoriteActivity" id="checkbox4"
+                                    value="checkbox4">
+                                <label class="form-check-label" for="checkbox4">Checkbox 4</label>
+                            </div>
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input" name="favoriteActivity" id="checkbox5"
+                                    value="checkbox5">
+                                <label class="form-check-label" for="checkbox5">Checkbox 5</label>
+                            </div>
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input" name="favoriteActivity" id="checkbox6"
+                                    value="checkbox6">
+                                <label class="form-check-label" for="checkbox6">Checkbox 6</label>
+                            </div>
+                        </div>
+
+                        <!-- Third column of option checkboxes -->
+                        <div class="col-md-4 borderLeft">
+                            <!-- Duplicate and modify the following lines for the next three checkboxes -->
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input" name="favoriteActivity" id="checkbox7"
+                                    value="checkbox7">
+                                <label class="form-check-label" for="checkbox7">Checkbox 7</label>
+                            </div>
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input" name="favoriteActivity" id="checkbox8"
+                                    value="checkbox8">
+                                <label class="form-check-label" for="checkbox8">Checkbox 8</label>
+                            </div>
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input" name="favoriteActivity" id="checkbox9"
+                                    value="checkbox9">
+                                <label class="form-check-label" for="checkbox9">Checkbox 9</label>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </fieldset>
+            </form>
+        </section>
+
+        <section id="googleMaps">
+            <div class="box">
+                <!-- Placeholder -->
+                <h2>This is where</h2>
+                <p>Google maps should display</p>
             </div>
-          </div>-->
+        </section>
+        <section>
+            <!-- Placeholder for Google Maps Results -->
+            <div class="mapResults">
+                <h2>Results:</h2>
+                <div class="result">
+                    <h3>Play Spot 1</h3>
+                    <p>123 Fun Street, Playtown</p>
+                </div>
 
-          <div class="iphone-carousel">
-            <div id="carouselExampleFade" class="carousel slide carousel-fade">
-              <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <img src="assets\images\bay-of-fundy.jpg" class="d-block w-100" alt="...">
+                <div class="result">
+
+                    <h3>Play Spot 2</h3>
+                    <p>456 Adventure Avenue, Kidsville</p>
                 </div>
-                <div class="carousel-item">
-                  <img src="assets\images\Magic-Mountain-Water-Park.jpg" class="d-block w-100" alt="...">
+
+                <div class="result">
+                    <h3>Play Spot 3</h3>
+                    <p>789 Joy Lane, Totland</p>
                 </div>
-                <div class="carousel-item">
-                  <img src="assets\images\magnetic-hill.jpg" class="d-block w-100" alt="...">
-                </div>
-              </div>
-              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-              </button>
-              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-              </button>
             </div>
-          </div>
-
-
+        </section>
     </main>
-    
+
+    <section class="form-section">
+        <div class="form-container">
+            <div class="container inputForm">
+                <form>
+                    <div class="mb-3">
+                        <label for="locationInput" class="form-label">Enter location</label>
+                        <input required type="email" class="form-control" id="exampleInputEmail1"
+                            aria-describedby="emailHelp">
+                        <div id="emailHelp" class="form-text">Enter the location you want your activity to take
+                            place.</div>
+                    </div>
+                    <div class="mb-3">
+                        <label required for="LocationInput" class="form-label">Enter Number of People</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        <div id="emailHelp" class="form-text">Enter the number of people your activity is for.</div>
+                    </div>
+
+                    <fieldset>
+                        <legend>What is Your Favorite Pet?</legend>
+                        <input type='checkbox' name='favorite_pet' value='Cats'>Cats<br>
+                        <input type='checkbox' name='favorite_pet' value='Dogs'>Dogs<br>
+                        <input type='checkbox' name='favorite_pet' value='Birds'>Birds<br>
+                        <br>
+                    </fieldset>
+
+                    <button type="submit" class="btn btn-primary">Submit</button>
+
+
+
+                    <!--<div class="dropdown">
+                <label for="activities">Activity Types</label>
+                <select name="activityIntrests[]" id="activities" multiple required>
+                    <option value="1" class="checkbox">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                </select>
+            </div> 
+            <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <label class="form-check-label" for="exampleCheck1">Check me out</label>
+            </div> -->
+
+                </form>
+            </div>
+    </section>
+    </div>
+
 </body>
+
 </html>
