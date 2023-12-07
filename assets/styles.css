@@ -1,4 +1,3 @@
-
 body {
     margin: 0;
     padding: 0;
@@ -32,7 +31,8 @@ header {
 }
 
 .header-logo {
-    max-width: 100px;
+    /*max-width: 100px; */
+    max-width: auto;
     height: auto;
     display: inline-block;
 }
@@ -64,7 +64,7 @@ header {
     padding: 20px;
 }
 
-.center-design {  
+.center-design {
     text-align: center;
     margin-bottom: 20px;
 }
@@ -78,10 +78,11 @@ header {
 
 
 
-.wrapper{
+.wrapper {
     display: flex;
-  }
-  .wrapper .left-text {
+}
+
+.wrapper .left-text {
     color: #fff;
     font-size: 96px;
     font-weight: 400;
@@ -92,17 +93,18 @@ header {
     color: #fff;
     font-size: 96px;
     font-weight: 400;
-    animation-delay: 2s; 
+    animation-delay: 2s;
 }
 
-  .wrapper .dynamic-txts{
-    margin-left:30px;
+.wrapper .dynamic-txts {
+    margin-left: 30px;
     height: 100px;
     line-height: 90px;
     overflow: hidden;
     background: #ffffff;
-  }
-  .dynamic-txts li{
+}
+
+.dynamic-txts li {
     list-style: none;
     color: #0c0000;
     font-family: 'Satoshi', sans-serif;
@@ -111,35 +113,42 @@ header {
     position: relative;
     top: 10;
     animation: slide 12s steps(4) infinite;
-  }
-  @keyframes slide {
-    100%{
-      top: -400px;
+}
+
+@keyframes slide {
+    100% {
+        top: -400px;
     }
-  }
-  .dynamic-txts li span{
+}
+
+.dynamic-txts li span {
     position: relative;
     margin: 5px 0;
     line-height: 90px;
-  }
-  .dynamic-txts li span::after{
+}
+
+.dynamic-txts li span::after {
     content: "";
     position: absolute;
     left: 0;
     height: 100%;
     width: 100%;
-      background: #ffffff;
+    background: #ffffff;
     border-left: 2px solid #FFFFFF;
     animation: typing 3.5s steps(10) infinite;
-  }
-  @keyframes typing {
-    40%, 60%{
-      left: calc(100% + 30px);
+}
+
+@keyframes typing {
+
+    40%,
+    60% {
+        left: calc(100% + 30px);
     }
-    100%{
-      left: 0;
+
+    100% {
+        left: 0;
     }
-  }
+}
 
 .corner-icons {
     display: flex;
@@ -207,7 +216,7 @@ header {
 }
 
 
-    
+
 .content-container {
     width: 100%;
     max-width: 1200px;
@@ -219,7 +228,7 @@ header {
 .form-container {
     width: 100%;
     max-width: 800px;
-    margin: 30px ;
+    margin: 30px;
     border: 2px solid #f4f4f6;
     border-radius: 10px;
     padding: 20px;
@@ -237,6 +246,3 @@ header {
         width: 90%;
     }
 }
-
-
-
