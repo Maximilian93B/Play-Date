@@ -79,6 +79,13 @@
                     <!-- Location input goes here -->
                 </div>
                 <div class="mb-3">
+                    <label for="locationInput" class="form-label">Enter location</label>
+                    <input required type="text" class="form-control" id="exampleInputEmail1"
+                        aria-describedby="emailHelp">
+                    <div id="emailHelp" class="form-text">Enter the location you want your activity to take
+                        place.</div>
+                </div>
+                <div class="mb-3">
                     <label for="numPeopleInput" class="form-label">Enter Number of People</label>
                     <!-- Number of People input goes here -->
                 </div>
@@ -152,7 +159,7 @@
             </form>
         </section>
 
-        <section id="googleMaps">
+        <section id="googleMaps" class="container">
             <div class="box">
                 <!-- Placeholder -->
                 <h2>This is where</h2>
@@ -161,7 +168,7 @@
         </section>
         <section>
             <!-- Placeholder for Google Maps Results -->
-            <div class="mapResults">
+            <div class="mapResults container">
                 <h2>Results:</h2>
                 <div class="result">
                     <h3>Play Spot 1</h3>
@@ -186,44 +193,6 @@
         <div class="form-container">
             <div class="container inputForm">
                 <form>
-                    <div class="mb-3">
-                        <label for="locationInput" class="form-label">Enter location</label>
-                        <input required type="email" class="form-control" id="exampleInputEmail1"
-                            aria-describedby="emailHelp">
-                        <div id="emailHelp" class="form-text">Enter the location you want your activity to take
-                            place.</div>
-                    </div>
-                    <div class="mb-3">
-                        <label required for="LocationInput" class="form-label">Enter Number of People</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                        <div id="emailHelp" class="form-text">Enter the number of people your activity is for.</div>
-                    </div>
-
-                    <fieldset>
-                        <legend>What is Your Favorite Pet?</legend>
-                        <input type='checkbox' name='favorite_pet' value='Cats'>Cats<br>
-                        <input type='checkbox' name='favorite_pet' value='Dogs'>Dogs<br>
-                        <input type='checkbox' name='favorite_pet' value='Birds'>Birds<br>
-                        <br>
-                    </fieldset>
-
-                    <button type="submit" class="btn btn-primary">Submit</button>
-
-
-
-                    <!--<div class="dropdown">
-                <label for="activities">Activity Types</label>
-                <select name="activityIntrests[]" id="activities" multiple required>
-                    <option value="1" class="checkbox">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                </select>
-            </div> 
-            <div class="mb-3 form-check">
-                <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                <label class="form-check-label" for="exampleCheck1">Check me out</label>
-            </div> -->
 
                 </form>
             </div>
