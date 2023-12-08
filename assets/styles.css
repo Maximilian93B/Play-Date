@@ -20,6 +20,16 @@ header {
     padding: 10px;
 }
 
+footer {
+    background-color: var(--mainOffWhite);
+    padding: 10px;
+    display: flex;
+    justify-content: flex-end;
+    order: 3;
+}
+
+
+
 .bodyContent {
     display: flex;
     justify-content: space-between;
@@ -411,6 +421,10 @@ header {
     left: 360px;
     transform: rotate(25deg);
     width: 75%;
+}
+
+.sectionTopSpacing {
+    margin-bottom: 5rem;
 }
 
 .sectionBottomSpacing {
