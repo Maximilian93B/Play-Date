@@ -246,3 +246,152 @@ header {
         width: 90%;
     }
 }
+
+/* Phone */
+
+:root {
+    --slides: 9;
+    --slide-duration: 2000ms;
+  }
+    
+  /* Slideshow Images START */
+  .phone-slideshow-list li:nth-child(1) {
+    background-image: url(""); 
+    background-color: pink;
+  }
+  .phone-slideshow-list li:nth-child(2) {
+    background-image: url(''); 
+  }
+  .phone-slideshow-list li:nth-child(3) {
+    background-image: url(''); 
+  }
+  .phone-slideshow-list li:nth-child(4) {
+    background-image: url(''); 
+  }
+  .phone-slideshow-list li:nth-child(5) {
+    background-image: url('');
+  }
+  .phone-slideshow-list li:nth-child(6) {
+    background-image: url(''); 
+  }
+  .phone-slideshow-list li:nth-child(7) {
+    background-image: url(''); 
+  }
+  .phone-slideshow-list li:nth-child(8) {
+    background-image: url(''); 
+  }
+  .phone-slideshow-list li:nth-child(9) {
+    background-image: url(''); 
+  }
+  
+
+ 
+  /* Slideshow Images END */
+
+  .phone-slideshow {
+    width: 100%;
+    height: auto;
+    max-width: 264px;
+    margin:auto;
+    position: relative;
+    display: table;
+
+  }
+      .phone-slideshow:before { /* Phone Template */
+        content: "";
+        display: block;
+        width: 100%;
+        height:0;
+        padding-bottom: 206.13%;
+        background: #0002;
+        background: transparent url('https://www.goodwall.io/sandbox/wp-content/uploads/sites/5/2021/05/iphonex-black.png') no-repeat 50% 50%;
+        background-size: contain;
+        position:absolute;
+        top:0;
+        left:0;
+        z-index: 2;
+      }
+  
+  .phone-slideshow .screen-mask {
+      display: block;
+      border: 1px solid purple;
+      width: auto;
+      height: 100%;
+      margin: 3%;
+      box-sizing: border-box;
+      position: relative;
+      overflow: hidden;
+      padding-bottom: 199%;
+      border-radius: 7%;
+  }
+  
+  .phone-slideshow-list {
+    list-style: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display:block;
+    width: calc(100% * var(--slides) );
+    height: 100%;
+    margin: 0;
+    padding:0;
+    display: flex;
+    flex-direction: row;
+      animation-name: phone-slideshow;
+      animation-duration: calc(var(--slide-duration) * var(--slides));
+      animation-iteration-count: infinite;
+      animation-delay: 1s;
+  }
+  
+     .phone-slideshow-list li {
+      display: block;
+      width: calc(100% * var(--slides));
+      width: 100%;
+      height: 0%;
+      padding-bottom: 23.60%;
+      font-size: 5em;
+      position: relative;
+      background-position: 50% 50%;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+  
+    .phone-container .phone-slideshow-list li:first-child {
+        z-index:-1;
+        animation-name: first-loop;
+        animation-duration: calc(var(--slide-duration) * var(--slides));
+        animation-iteration-count: infinite;
+        animation-delay: 1s;
+      }
+  
+  
+  @keyframes phone-slideshow {
+    0%   {left: 0;}
+    5.5%  {left: calc( -100% ); }
+    11%  {left: calc( -100% ); }
+    16.5%  {left: calc( -100%*2 ); }
+    22%  {left: calc( -100%*2 ); }
+    27.5%  {left: calc( -100%*3 ); }
+    33%  {left: calc( -100%*3 ); }
+    38.5%  {left: calc( -100%*4 ); }
+    44%  {left: calc( -100%*4 ); }
+    49.5%  {left: calc( -100%*5 ); }
+    55%  {left: calc( -100%*5 ); }
+    60.5%  {left: calc( -100%*6 ); }
+    66%  {left: calc( -100%*6 ); }
+    71.5%  {left: calc( -100%*7 ); }
+    77%  {left: calc( -100%*7 ); }
+    82.5%  {left: calc( -100%*8 ); }
+    88%  {left: calc( -100%*8 ); }
+    93.5%  {left: calc( -100%*9 ); }
+    99.99%  {left: calc( -100%*9 ); }
+    100% {left: 0;}
+  }
+  
+  @keyframes first-loop {
+    0%   {left: 0;}
+    47.99%  {left: 0; }
+    48%  {left: calc( 100% ); }
+    99.99%  {left: calc( 100% ); }
+    100% {left: 0;}
+  }
