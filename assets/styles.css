@@ -47,6 +47,8 @@ header {
     margin-right: 20px;
     text-decoration: none;
     color: #333;
+    font-weight: bold;
+    font-family: sans-serif;
 }
 
 .social-icons i {
@@ -152,7 +154,6 @@ header {
 
 .corner-icons {
     display: flex;
-    position: fixed;
     top: 0;
     bottom: 0;
     left: 0;
@@ -364,6 +365,35 @@ header {
         animation-delay: 1s;
       }
   
+      .swing {
+        position: absolute;
+        top: 410px;
+        left: 380px;
+        width: 6%;
+    }
+
+    .baseball {
+    position: absolute;
+    top: 440px;
+    right: 360px;
+    width: 10%;
+    }
+    .biking {
+        position: absolute;
+        top: 820px;
+        left: 350px;
+        width: 8%;
+    }
+
+    .skate {
+        position: relative;
+        top: -300px;
+        left: 360px;
+        transform: rotate(25deg);
+        width: 75%;
+    }
+
+
   
   @keyframes phone-slideshow {
     0%   {left: 0;}
