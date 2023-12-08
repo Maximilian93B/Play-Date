@@ -37,11 +37,10 @@
     </header>
 
     <main>
-        <main>
-            <div class="main-container">
-                <div class="phone-slideshow">
-                    <div class="screen-mask">
-                      <ul class="phone-slideshow-list">
+        <div class="main-container">
+            <div class="phone-slideshow">
+                <div class="screen-mask">
+                    <ul class="phone-slideshow-list">
                         <li></li>
                         <li></li>
                         <li></li>
@@ -51,24 +50,20 @@
                         <li></li>
                         <li></li>
                         <li></li>
-                      </ul>
-                    </div>
-                  </div>
-                
-                
-    
+                    </ul>
+                </div>
+            </div>
+
             <div class="flex-container">
-                <div class="flex-container">
-                    <div class="wrapper">
-                        <ul class="dynamic-txts">
-                            <li><span>Where Plans</span></li>
-                        </ul>
-                    </div>
-                    <div class="wrapper">
-                        <ul class="dynamic-txts">
-                            <li><span>Meet Play</span></li>
-                        </ul>
-                    </div>
+                <div class="wrapper">
+                    <ul class="dynamic-txts">
+                        <li><span>Where Plans</span></li>
+                    </ul>
+                </div>
+                <div class="wrapper">
+                    <ul class="dynamic-txts">
+                        <li><span>Meet Play</span></li>
+                    </ul>
                 </div>
             </div>
 
@@ -79,90 +74,95 @@
             <div class="get-started-button">
                 <!-- App Description -->
                 <div class="app-description">
-                    <p> Unleash fun with spontaneous plans. Connect, explore, and create unforgettable moments in your city. Get started today!"</p>
+                    <p>Unleash fun with spontaneous plans. Connect, explore, and create unforgettable moments in your city.
+                        Get started today!</p>
                 </div>
                 <!-- Start Button -->
                 <button class="button-63">Get Started</button>
             </div>
         </div>
-        <section class="container inputForm">
-            <form>
-                <div class="mb-3">
-                    <h2>Define what we're looking for!</h2>
-                    <!-- Location input goes here -->
+
+        <section class="form-section">
+            <div class="form-container">
+                <div class="container inputForm">
+                    <form>
+                        <div class="mb-3">
+                            <h2>Define what we're looking for!</h2>
+                            <!-- Location input goes here -->
+                        </div>
+                        <div class="mb-3">
+                            <label for="numPeopleInput" class="form-label">Enter Number of People</label>
+                            <!-- Number of People input goes here -->
+                        </div>
+
+                        <fieldset>
+                            <h2>What type of activity interests you? <br><span
+                                    class="additionalText">(you can select more than one)</span></h2>
+                            <div class="row">
+                                <!-- First column of option checkboxes -->
+                                <div class="col-md-4 ">
+                                    <div class="form-check">
+                                        <input type="checkbox" class="form-check-input" name="favoriteActivity"
+                                            id="walkHike" value="walkHike">
+                                        <label class="form-check-label" for="walkHike">Walk or Hike</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input type="checkbox" class="form-check-input" name="favoriteActivity"
+                                            id="swim" value="swim">
+                                        <label class="form-check-label" for="swim">Swimming</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input type="checkbox" class="form-check-input" name="favoriteActivity"
+                                            id="artsCrafts" value="artsCrafts">
+                                        <label class="form-check-label" for="artsCrafts">Arts & Crafts</label>
+                                    </div>
+                                </div>
+
+                                <!-- Second column of option checkboxes -->
+                                <div class="col-md-4 borderLeft">
+                                    <!-- Duplicate and modify the following lines for the next three checkboxes -->
+                                    <div class="form-check">
+                                        <input type="checkbox" class="form-check-input" name="favoriteActivity"
+                                            id="checkbox4" value="checkbox4">
+                                        <label class="form-check-label" for="checkbox4">Checkbox 4</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input type="checkbox" class="form-check-input" name="favoriteActivity"
+                                            id="checkbox5" value="checkbox5">
+                                        <label class="form-check-label" for="checkbox5">Checkbox 5</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input type="checkbox" class="form-check-input" name="favoriteActivity"
+                                            id="checkbox6" value="checkbox6">
+                                        <label class="form-check-label" for="checkbox6">Checkbox 6</label>
+                                    </div>
+                                </div>
+
+                                <!-- Third column of option checkboxes -->
+                                <div class="col-md-4 borderLeft">
+                                    <!-- Duplicate and modify the following lines for the next three checkboxes -->
+                                    <div class="form-check">
+                                        <input type="checkbox" class="form-check-input" name="favoriteActivity"
+                                            id="checkbox7" value="checkbox7">
+                                        <label class="form-check-label" for="checkbox7">Checkbox 7</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input type="checkbox" class="form-check-input" name="favoriteActivity"
+                                            id="checkbox8" value="checkbox8">
+                                        <label class="form-check-label" for="checkbox8">Checkbox 8</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input type="checkbox" class="form-check-input" name="favoriteActivity"
+                                            id="checkbox9" value="checkbox9">
+                                        <label class="form-check-label" for="checkbox9">Checkbox 9</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </fieldset>
+                    </form>
                 </div>
-                <div class="mb-3">
-                    <label for="numPeopleInput" class="form-label">Enter Number of People</label>
-                    <!-- Number of People input goes here -->
-                </div>
-
-                <fieldset>
-                    <h2>What type of activity interests you? <br><span class="additionalText">(you can select more
-                            than
-                            one)</span></h2>
-                    <div class="row">
-                        <!-- First column of option checkboxes -->
-                        <div class="col-md-4 ">
-                            <div class="form-check">
-                                <input type="checkbox" class="form-check-input" name="favoriteActivity" id="walkHike"
-                                    value="walkHike">
-                                <label class="form-check-label" for="walkHike">Walk or Hike</label>
-                            </div>
-                            <div class="form-check">
-                                <input type="checkbox" class="form-check-input" name="favoriteActivity" id="swim"
-                                    value="swim">
-                                <label class="form-check-label" for="swim">Swimming</label>
-                            </div>
-                            <div class="form-check">
-                                <input type="checkbox" class="form-check-input" name="favoriteActivity" id="artsCrafts"
-                                    value="artsCrafts">
-                                <label class="form-check-label" for="artsCrafts">Arts & Crafts</label>
-                            </div>
-                        </div>
-
-                        <!-- Second column of option checkboxes -->
-                        <div class="col-md-4 borderLeft">
-                            <!-- Duplicate and modify the following lines for the next three checkboxes -->
-                            <div class="form-check">
-                                <input type="checkbox" class="form-check-input" name="favoriteActivity" id="checkbox4"
-                                    value="checkbox4">
-                                <label class="form-check-label" for="checkbox4">Checkbox 4</label>
-                            </div>
-                            <div class="form-check">
-                                <input type="checkbox" class="form-check-input" name="favoriteActivity" id="checkbox5"
-                                    value="checkbox5">
-                                <label class="form-check-label" for="checkbox5">Checkbox 5</label>
-                            </div>
-                            <div class="form-check">
-                                <input type="checkbox" class="form-check-input" name="favoriteActivity" id="checkbox6"
-                                    value="checkbox6">
-                                <label class="form-check-label" for="checkbox6">Checkbox 6</label>
-                            </div>
-                        </div>
-
-                        <!-- Third column of option checkboxes -->
-                        <div class="col-md-4 borderLeft">
-                            <!-- Duplicate and modify the following lines for the next three checkboxes -->
-                            <div class="form-check">
-                                <input type="checkbox" class="form-check-input" name="favoriteActivity" id="checkbox7"
-                                    value="checkbox7">
-                                <label class="form-check-label" for="checkbox7">Checkbox 7</label>
-                            </div>
-                            <div class="form-check">
-                                <input type="checkbox" class="form-check-input" name="favoriteActivity" id="checkbox8"
-                                    value="checkbox8">
-                                <label class="form-check-label" for="checkbox8">Checkbox 8</label>
-                            </div>
-                            <div class="form-check">
-                                <input type="checkbox" class="form-check-input" name="favoriteActivity" id="checkbox9"
-                                    value="checkbox9">
-                                <label class="form-check-label" for="checkbox9">Checkbox 9</label>
-                            </div>
-                        </div>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                </fieldset>
-            </form>
+            </div>
         </section>
 
         <section id="googleMaps">
@@ -182,7 +182,6 @@
                 </div>
 
                 <div class="result">
-
                     <h3>Play Spot 2</h3>
                     <p>456 Adventure Avenue, Kidsville</p>
                 </div>
@@ -194,54 +193,6 @@
             </div>
         </section>
     </main>
-
-    <section class="form-section">
-        <div class="form-container">
-            <div class="container inputForm">
-                <form>
-                    <div class="mb-3">
-                        <label for="locationInput" class="form-label">Enter location</label>
-                        <input required type="email" class="form-control" id="exampleInputEmail1"
-                            aria-describedby="emailHelp">
-                        <div id="emailHelp" class="form-text">Enter the location you want your activity to take
-                            place.</div>
-                    </div>
-                    <div class="mb-3">
-                        <label required for="LocationInput" class="form-label">Enter Number of People</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                        <div id="emailHelp" class="form-text">Enter the number of people your activity is for.</div>
-                    </div>
-
-                    <fieldset>
-                        <legend>What is Your Favorite Pet?</legend>
-                        <input type='checkbox' name='favorite_pet' value='Cats'>Cats<br>
-                        <input type='checkbox' name='favorite_pet' value='Dogs'>Dogs<br>
-                        <input type='checkbox' name='favorite_pet' value='Birds'>Birds<br>
-                        <br>
-                    </fieldset>
-
-                    <button type="submit" class="btn btn-primary">Submit</button>
-
-
-
-                    <!--<div class="dropdown">
-                <label for="activities">Activity Types</label>
-                <select name="activityIntrests[]" id="activities" multiple required>
-                    <option value="1" class="checkbox">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                </select>
-            </div> 
-            <div class="mb-3 form-check">
-                <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                <label class="form-check-label" for="exampleCheck1">Check me out</label>
-            </div> -->
-
-                </form>
-            </div>
-    </section>
-    </div>
 
 </body>
 
