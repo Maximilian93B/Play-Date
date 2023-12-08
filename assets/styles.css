@@ -413,6 +413,10 @@ header {
     width: 75%;
 }
 
+.sectionBottomSpacing {
+    margin-bottom: 3rem;
+}
+
 
 
 @keyframes phone-slideshow {
