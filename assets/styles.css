@@ -70,7 +70,7 @@ header {
     flex-direction: column;
     align-items: center;
     max-width: 1200px;
-    margin: 15% auto;
+    /*margin: 15% auto;*/
     margin-right: 0 auto;
     padding: 20px;
 }
@@ -414,7 +414,11 @@ header {
 }
 
 .sectionBottomSpacing {
-    margin-bottom: 3rem;
+    margin-bottom: 5rem;
+}
+
+.sectionBottomSpacing2 {
+    margin-bottom: 1.5rem;
 }
 
 
