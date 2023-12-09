@@ -1,18 +1,25 @@
 // Add all API Scripts to HTML file
 
 // add DOM event listener to let html load first so we have no loading issues. 
+document.addEventListener("DOMContentLoaded", function() { 
 
+    
+});
 // Declare all variables (const, let , var) --> We can Declare API url and Key so we dont need to C&P every time. 
  
-/*
-    - const apiURL = API URL 
-    - const apiKey = API KEY 
-*/
+const startButton = document.getElementById("startButton")
+const inputForm = document.getElementById("inputForm")
+const apiURL = apiURL 
+const apiKey = apiKey
+
 
 
 //add Start button Event Listner (add console.log to ensure the event works)
+startButton.addEventListener("click", function () {
+    console.log("Get Started Button Clicked");
+    inputForm.scrollIntoView({ behavior: "smooth" });
 
-//Handle Form submission --> add Event to "Submit Button" --> API form Data and then triggger Google Maps API
+    //Handle Form submission --> add Event to "Submit Button" --> API form Data and then triggger Google Maps API
 
 /* Form submission 
 - Add event listener to button 
@@ -56,7 +63,7 @@ Make Fetch Function after getting Geo coding results to obtain users location
 
 Fetch Function Template 
 
--Fetch data from google using obstained co-ords from geo results and selectedActivites 
+-Fetch data from google using obtained co-ords from geo results and selectedActivites 
     
     - use apiUrl variable
     
@@ -76,22 +83,18 @@ Fetch Function Template
     Catch to handle errors 
         - 
 */
+/* 
+   Displaying the results
+   - Make a function to display results
+       - Call the container using var/const and use querySelector or getElementById
+       - Clear previous results
 
-/*                Displaying the results
- - Make a function to dispaly results 
-        - call the container using var/const and use querySeletor or getElement
-        
-        - clear previous results 
+       - Make a loop to display and generate results in containers
+           - Loop logic using forEach
 
-        - make loop to Display and genereate results in containers 
-            - loop logic using forEach
-            
-            places.forEach(place => {
-                - const "Element" = document.createElement(What ever element you want ot create); 
-                - yourElement.innerHTML = ' all the HTML you want to add ex. "<h3>${place.name}<h3>" 
-                We can Dynamically add content   
-                    - resultsContainer.appendChild(where we want to add content)
-
-            }
-                
+           places.forEach(place => {
+               - const yourElement = document.createElement("WhateverElementYouWantToCreate");
+               - yourElement.innerHTML = `<h3>${place.name}</h3>`; // We can dynamically add content
+               - resultsContainer.appendChild(yourElement); // Add content where you want
+           });
 */
