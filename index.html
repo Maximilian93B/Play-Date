@@ -16,8 +16,9 @@
 </head>
 
 <body>
-    <header>
+    <header class="sectionBottomSpacing">
         <div class="bodyContent">
+
             <div class="header-section start">
                 <a class="header-navCTA " href="/About">About</a>
                 <a class="header-navCTA " href="/contact">Contact</a>
@@ -38,7 +39,7 @@
     </header>
 
     <main>
-        <div class="main-container">
+        <div class="main-container container" sectionBottomSpacing>
             <div class="phone-slideshow">
                 <div class="screen-mask">
                     <ul class="phone-slideshow-list">
@@ -55,9 +56,9 @@
                 </div>
             </div>
 
-            <div class="flex-container">
+            <div class="flex-container sectionBottomSpacing">
                 <div class="wrapper">
-                    <ul class="dynamic-txts">
+                    <ul class="dynamic-txts sectionBottomSpacing">
                         <li><span>Where Plans</span></li>
                     </ul>
                 </div>
@@ -72,8 +73,8 @@
                 <!--icons go here-->
                 <figure><img class="swing" src="assets\images\swing.jpg" alt=""></figure>
                 <figure><img class="baseball" src="assets\images\kid-baseball.jpg" alt=""></figure>
-                <figure><img class="biking" src="assets\images\biking.jpg" alt=""></figure>
-                <figure><img class="skate" src="assets\images\skate.jpg" alt=""></figure>
+                <figure><img class="biking sectionBottomSpacing" src="assets\images\biking.jpg" alt=""></figure>
+                <figure><img class="skate sectionBottomSpacing" src="assets\images\skate.jpg" alt=""></figure>
             </div>
 
             <div class="get-started-button">
@@ -84,147 +85,158 @@
                         Get started today!</p>
                 </div>
                 <!-- Start Button -->
-                <button class="button-63">Get Started</button>
+                <button class="button-63 sectionBottomSpacing">Get Started</button>
             </div>
         </div>
 
         <section class=" container form-section">
-            <div class="form-container">
+            <div class="form-container sectionBottomSpacing">
                 <div class="inputForm">
-                    <form>
+                    <form class="sectionBottomSpacing2">
                         <div class="mb-3 ">
                             <h2>Define what we're looking for!</h2>
                             <!-- Location input goes here -->
                             <label for="locationInput">Location:</label>
                             <input type="text" id="locationInput" placeholder="Enter location">
                         </div>
+                </div>
+                <div class="sectionBottomSpacing2">
+                    <div class="mb-3 bottomSpacing">
+                        <!-- Number of People input goes here -->
+                        <label for="numPeopleInput" class="form-label">Enter Number of People:</label>
+                        <input type="text" id="locationInput" placeholder="Enter number of people">
+                    </div>
+                </div>
 
-                        <div class="mb-3">
-                            <!-- Number of People input goes here -->
-                            <label for="numPeopleInput" class="form-label">Enter Number of People:</label>
-                            <input type="text" id="locationInput" placeholder="Enter number of people">
-
-
+                <fieldset>
+                    <div class="sectionBottomSpacing"></div>
+                    <h2>What type of activity interests you? <br><span class="additionalText">(you can select
+                            more than one)</span></h2>
+                    <div class="row sectionBottomSpacing2">
+                        <!-- First column of option checkboxes -->
+                        <div class="col-md-4 ">
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input" name="favoriteActivity" id="walkHike"
+                                    value="walkHike">
+                                <label class="form-check-label" for="walkHike">Walk or Hike</label>
+                            </div>
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input" name="favoriteActivity" id="swim"
+                                    value="swim">
+                                <label class="form-check-label" for="swim">Swimming</label>
+                            </div>
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input" name="favoriteActivity" id="artsCrafts"
+                                    value="artsCrafts">
+                                <label class="form-check-label" for="artsCrafts">Arts & Crafts</label>
+                            </div>
                         </div>
 
-                        <fieldset>
-                            <h2>What type of activity interests you? <br><span class="additionalText">(you can select
-                                    more than one)</span></h2>
-                            <div class="row">
-                                <!-- First column of option checkboxes -->
-                                <div class="col-md-4 ">
-                                    <div class="form-check">
-                                        <input type="checkbox" class="form-check-input" name="favoriteActivity"
-                                            id="walkHike" value="walkHike">
-                                        <label class="form-check-label" for="walkHike">Walk or Hike</label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input type="checkbox" class="form-check-input" name="favoriteActivity"
-                                            id="swim" value="swim">
-                                        <label class="form-check-label" for="swim">Swimming</label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input type="checkbox" class="form-check-input" name="favoriteActivity"
-                                            id="artsCrafts" value="artsCrafts">
-                                        <label class="form-check-label" for="artsCrafts">Arts & Crafts</label>
-                                    </div>
-                                </div>
-
-                                <!-- Second column of option checkboxes -->
-                                <div class="col borderLeft">
-                                    <!-- Duplicate and modify the following lines for the next three checkboxes -->
-                                    <div class="form-check">
-                                        <input type="checkbox" class="form-check-input" name="favoriteActivity"
-                                            id="checkbox4" value="checkbox4">
-                                        <label class="form-check-label" for="checkbox4">Checkbox 4</label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input type="checkbox" class="form-check-input" name="favoriteActivity"
-                                            id="checkbox5" value="checkbox5">
-                                        <label class="form-check-label" for="checkbox5">Checkbox 5</label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input type="checkbox" class="form-check-input" name="favoriteActivity"
-                                            id="checkbox6" value="checkbox6">
-                                        <label class="form-check-label" for="checkbox6">Checkbox 6</label>
-                                    </div>
-                                </div>
-
-                                <!-- Third column of option checkboxes -->
-                                <div class="col-md-4 borderLeft">
-                                    <!-- Duplicate and modify the following lines for the next three checkboxes -->
-                                    <div class="form-check">
-                                        <input type="checkbox" class="form-check-input" name="favoriteActivity"
-                                            id="checkbox7" value="checkbox7">
-                                        <label class="form-check-label" for="checkbox7">Checkbox 7</label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input type="checkbox" class="form-check-input" name="favoriteActivity"
-                                            id="checkbox8" value="checkbox8">
-                                        <label class="form-check-label" for="checkbox8">Checkbox 8</label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input type="checkbox" class="form-check-input" name="favoriteActivity"
-                                            id="checkbox9" value="checkbox9">
-                                        <label class="form-check-label" for="checkbox9">Checkbox 9</label>
-                                    </div>
-                                </div>
+                        <!-- Second column of option checkboxes -->
+                        <div class="col borderLeft">
+                            <!-- Duplicate and modify the following lines for the next three checkboxes -->
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input" name="favoriteActivity" id="checkbox4"
+                                    value="checkbox4">
+                                <label class="form-check-label" for="checkbox4">Checkbox 4</label>
                             </div>
-                            <button type="submit" class=" button-63">Submit</button>
-                        </fieldset>
-
-
-
-
-
-
-
-                        <section id="googleMaps" class="container">
-                            <div class="box">
-                                <!-- Placeholder -->
-                                <h2>This is where</h2>
-                                <p>Google maps should display</p>
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input" name="favoriteActivity" id="checkbox5"
+                                    value="checkbox5">
+                                <label class="form-check-label" for="checkbox5">Checkbox 5</label>
                             </div>
-                        </section>
-                        <section>
-                            <!-- Placeholder for Google Maps Results -->
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input" name="favoriteActivity" id="checkbox6"
+                                    value="checkbox6">
+                                <label class="form-check-label" for="checkbox6">Checkbox 6</label>
+                            </div>
+                        </div>
 
-                            <div class="mapResults container">
-                                <h2>Results:</h2>
-                                <!-- 1st row of results -->
-                                <div class="row">
-                                    <div class="col-md-4">
-                                        <div class="result">
-                                            <h3>Play Spot 1</h3>
-                                            <p>123 Fun Street, Playtown</p>
-                                        </div>
-                                    </div>
+                        <!-- Third column of option checkboxes -->
+                        <div class="col-md-4 borderLeft">
+                            <!-- Duplicate and modify the following lines for the next three checkboxes -->
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input" name="favoriteActivity" id="checkbox7"
+                                    value="checkbox7">
+                                <label class="form-check-label" for="checkbox7">Checkbox 7</label>
+                            </div>
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input" name="favoriteActivity" id="checkbox8"
+                                    value="checkbox8">
+                                <label class="form-check-label" for="checkbox8">Checkbox 8</label>
+                            </div>
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input" name="favoriteActivity" id="checkbox9"
+                                    value="checkbox9">
+                                <label class="form-check-label" for="checkbox9">Checkbox 9</label>
+                            </div>
+                        </div>
+                    </div>
 
-                                    <div class="col-md-4">
-                                        <div class="result">
-                                            <h3>Play Spot 2</h3>
-                                            <p>456 Adventure Avenue, Kidsville</p>
-                                        </div>
-                                    </div>
+                    <button type="submit" class=" button-63">Submit</button>
+                </fieldset>
+            </div>
 
-                                    <div class="col-md-4">
-                                        <div class="result">
-                                            <h3>Play Spot 3</h3>
-                                            <p>789 Joy Lane, Totland</p>
-                                        </div>
-                                    </div>
-                                </div>
 
-                                <!-- 2nd row of results -->
-                                <div class="row">
-                                    <!-- Add more col-md-4 divs for additional results -->
-                                </div>
-                        </section>
+
+
+
+
+
+            <section id="googleMaps" class="container form-container sectionBottomSpacing">
+
+                <!-- Placeholder -->
+                <h2>This is where</h2>
+                <p>Google maps should display</p>
+                </div>
+            </section>
+            <section>
+                <!-- Placeholder for Google Maps Results -->
+
+                <div class="mapResults container form-container sectionBottomSpacing">
+                    <h2>Results:</h2>
+                    <!-- 1st row of results -->
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="result">
+                                <h3>Play Spot 1</h3>
+                                <p>123 Fun Street, Playtown</p>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="result">
+                                <h3>Play Spot 2</h3>
+                                <p>456 Adventure Avenue, Kidsville</p>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="result">
+                                <h3>Play Spot 3</h3>
+                                <p>789 Joy Lane, Totland</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 2nd row of results -->
+                    <div class="row">
+                        <!-- Add more col-md-4 divs for additional results -->
+                    </div>
+            </section>
     </main>
 
 
 
+    <footer class="sectionTopSpacing sectionBottomSpacing ">
+        <div class="bodyContent">
 
+            <div>
+                <a class="header-navCTA " href="/contact">Contact</a>
+                <a class="header-navCTA " href="/Developers">Developers</a>
+            </div>
+
+    </footer>
 </body>
 
 </html>
