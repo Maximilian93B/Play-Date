@@ -413,6 +413,11 @@ header {
     width: 75%;
 }
 
+/* Spacing Classes */
+.sectionTopmSpacing {
+    margin-bottom: 1.5rem;
+}
+
 .sectionBottomSpacing {
     margin-bottom: 5rem;
 }
@@ -420,6 +425,7 @@ header {
 .sectionBottomSpacing2 {
     margin-bottom: 1.5rem;
 }
+
 
 
 
