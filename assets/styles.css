@@ -20,6 +20,16 @@ header {
     padding: 10px;
 }
 
+footer {
+    background-color: var(--mainOffWhite);
+    padding: 10px;
+    display: flex;
+    justify-content: flex-end;
+    order: 3;
+}
+
+
+
 .bodyContent {
     display: flex;
     justify-content: space-between;
@@ -55,6 +65,7 @@ header {
 .header-navCTA {
     margin-right: 20px;
     text-decoration: none;
+    color: #333;
     color: var(--mainDark);
     font-weight: bold;
     font-family: sans-serif;
@@ -260,7 +271,7 @@ header {
 /* Phone */
 
 :root {
-    --slides: 9;
+    --slides: 10;
     --slide-duration: 2000ms;
 }
 
@@ -288,19 +299,22 @@ header {
 
 .phone-slideshow-list li:nth-child(6) {
     background-image: url('');
-}
+  }
 
-.phone-slideshow-list li:nth-child(7) {
-    background-image: url('');
-}
+  .phone-slideshow-list li:nth-child(7) {
+    background-image: url(''); 
+  }
+  .phone-slideshow-list li:nth-child(8) {
+    background-image: url(''); 
+  }
+  .phone-slideshow-list li:nth-child(9) {
+    background-image: url(''); 
+  }
+  .phone-slideshow-list li:nth-child(10) {
+    background-image: url(''); 
+  }
 
-.phone-slideshow-list li:nth-child(8) {
-    background-image: url('');
-}
 
-.phone-slideshow-list li:nth-child(9) {
-    background-image: url('');
-}
 
 
 
@@ -413,9 +427,7 @@ header {
     width: 75%;
 }
 
-/* Spacing Classes */
-.sectionTopmSpacing {
-    margin-bottom: 1.5rem;
+
 }
 
 .sectionBottomSpacing {
@@ -531,4 +543,75 @@ header {
     100% {
         left: 0;
     }
-}
+
+  
+    .phone-container .phone-slideshow-list li:first-child {
+        z-index:-1;
+        animation-name: first-loop;
+        animation-duration: calc(var(--slide-duration) * var(--slides));
+        animation-iteration-count: infinite;
+        animation-delay: 1s;
+      }
+     
+  
+      .swing {
+        position: absolute;
+        top: 230px;
+        left: 380px;
+        width: 6%;
+    }
+
+    .baseball {
+    position: absolute;
+    top: 270px;
+    right: 360px;
+    width: 10%;
+    }
+    .biking {
+        position: absolute;
+        top: 620px;
+        left: 350px;
+        width: 8%;
+    }
+
+    .skate {
+        position: relative;
+        top: -440px;
+        left: 360px;
+        transform: rotate(25deg);
+        width: 75%;
+    }
+
+
+  
+  @keyframes phone-slideshow {
+    0%   {left: 0;}
+    5.5%  {left: calc( -100%*2 ); }
+    11%  {left: calc( -100%*2 ); }
+    16.5%  {left: calc( -100%*2 ); }
+    22%  {left: calc( -100%*2 ); }
+    27.5%  {left: calc( -100%*3 ); }
+    33%  {left: calc( -100%*3 ); }
+    38.5%  {left: calc( -100%*4 ); }
+    44%  {left: calc( -100%*4 ); }
+    49.5%  {left: calc( -100%*5 ); }
+    55%  {left: calc( -100%*5 ); }
+    60.5%  {left: calc( -100%*6 ); }
+    66%  {left: calc( -100%*6 ); }
+    71.5%  {left: calc( -100%*7 ); }
+    77%  {left: calc( -100%*7 ); }
+    82.5%  {left: calc( -100%*8 ); }
+    88%  {left: calc( -100%*8 ); }
+    93.5%  {left: calc( -100%*9 ); }
+    99.99%  {left: calc( -100%*9 ); }
+    100% {left: 0;}
+  }
+  
+  @keyframes first-loop {
+    0%   {left: 0;}
+    47.99%  {left: 0; }
+    48%  {left: calc( 100% ); }
+    99.99%  {left: calc( 100% ); }
+    100% {left: 0;}
+  }
+
