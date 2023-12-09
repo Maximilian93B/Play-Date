@@ -372,27 +372,27 @@ header {
   
       .swing {
         position: absolute;
-        top: 410px;
+        top: 230px;
         left: 380px;
         width: 6%;
     }
 
     .baseball {
     position: absolute;
-    top: 440px;
+    top: 270px;
     right: 360px;
     width: 10%;
     }
     .biking {
         position: absolute;
-        top: 820px;
+        top: 620px;
         left: 350px;
         width: 8%;
     }
 
     .skate {
         position: relative;
-        top: -300px;
+        top: -440px;
         left: 360px;
         transform: rotate(25deg);
         width: 75%;
