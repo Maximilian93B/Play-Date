@@ -410,21 +410,20 @@ footer {
 
 .biking {
     position: absolute;
-    top: 620px;
+    top: 540px;
     left: 350px;
     width: 8%;
 }
 
 .skate {
     position: relative;
-    top: -450px;
+    top: -520px;
     left: 360px;
     transform: rotate(25deg);
     width: 75%;
 }
 
 
-}
 
 .sectionBottomSpacing {
     margin-bottom: 5rem;
