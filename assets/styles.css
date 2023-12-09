@@ -251,7 +251,7 @@ header {
 /* Phone */
 
 :root {
-    --slides: 9;
+    --slides: 10;
     --slide-duration: 2000ms;
   }
     
@@ -284,6 +284,10 @@ header {
   .phone-slideshow-list li:nth-child(9) {
     background-image: url(''); 
   }
+  .phone-slideshow-list li:nth-child(10) {
+    background-image: url(''); 
+  }
+
   
 
  
@@ -364,6 +368,7 @@ header {
         animation-iteration-count: infinite;
         animation-delay: 1s;
       }
+     
   
       .swing {
         position: absolute;
@@ -397,8 +402,8 @@ header {
   
   @keyframes phone-slideshow {
     0%   {left: 0;}
-    5.5%  {left: calc( -100% ); }
-    11%  {left: calc( -100% ); }
+    5.5%  {left: calc( -100%*2 ); }
+    11%  {left: calc( -100%*2 ); }
     16.5%  {left: calc( -100%*2 ); }
     22%  {left: calc( -100%*2 ); }
     27.5%  {left: calc( -100%*3 ); }
