@@ -9,6 +9,12 @@ document.addEventListener("DOMContentLoaded", function() {
  
 const startButton = document.getElementById("startButton")
 const inputForm = document.getElementById("inputForm")
+const locationInput = document.getElementById("locationInput")
+const submitButton = document.getElementById("submitButton")
+const googleMaps = document.getElementById("googleMaps") 
+const resultsContainer = document.getElementById("resultsContainer")
+
+
 const apiURL = apiURL 
 const apiKey = apiKey
 
