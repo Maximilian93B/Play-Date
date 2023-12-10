@@ -248,7 +248,7 @@ footer {
 /* Add a box around the inputForm */
 .form-container {
     width: 100%;
-    max-width: 800px;
+    max-width: 100%;  /* Adjust this if you want a maximum width */
     margin: 30px;
     border: 2px solid #f4f4f6;
     border-radius: 10px;
@@ -258,7 +258,7 @@ footer {
 
 /* Style for the inputForm */
 .container.inputForm {
-    width: 100%;
+    width: 50%; /* Set the width to 100% */
 }
 
 /* Media query for smaller screens */
