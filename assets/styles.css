@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+
 :root {
     --mainDark: #212529;
     --mainOffWhite: #f8f9fa;
@@ -13,6 +15,7 @@ body {
     display: flex;
     box-sizing: border-box;
     flex-direction: column;
+    font-size: 16px;
 }
 
 header {
@@ -20,12 +23,15 @@ header {
     padding: 10px;
 }
 
+
+
 footer {
     background-color: var(--mainOffWhite);
     padding: 10px;
     display: flex;
     justify-content: flex-end;
     order: 3;
+    font-family:'Poppins', sans-serif; 
 }
 
 
@@ -38,7 +44,11 @@ footer {
 .header-section {
     display: flex;
     align-items: center;
+    font-family: 'Poppins', sans-serif;
+    justify-content: space-between;
+    
 }
+
 
 .header-section.start {
     order: 1;
@@ -47,6 +57,7 @@ footer {
 .header-section.middle {
     order: 2;
     text-align: center;
+    margin-right: 150px;
 }
 
 .header-logo {
@@ -128,10 +139,10 @@ footer {
 
 .dynamic-txts li {
     list-style: none;
-    color: #0c0000;
-    font-family: 'Satoshi', sans-serif;
+    color: var( --mainGradientBlue);
+    font-family:'Poppins', sans-serif;
     font-size: 96px;
-    font-weight: 500;
+    font-weight: 400;
     position: relative;
     top: 10;
     animation: slide 12s steps(4) infinite;
@@ -172,13 +183,27 @@ footer {
     }
 }
 
+/* Media Query for mobile devices*/
+@media (max-width: 768px) {
+    .dynamic-txts li {
+        font-size: 18px; 
+    }
+}
+
 .corner-icons {
-    display: flex;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    justify-content: space-between;
-    padding: 20px;
+    display: hide;
+}
+
+@media (max-width: 768px) {
+    .corner-icons {
+        display: none;
+    }
+}
+    
+@media (max-width: 768px) {
+    .dynamic-txts {
+        display: none;
+    }
 }
 
 .bottom-content {
@@ -191,13 +216,23 @@ footer {
 .app-description {
     text-align: center;
     margin-top: 20px;
+    font-size: 24px;
+    font-family:'Poppins', sans-serif;
+}
+
+.app-description p {
+    /* Your paragraph styles go here */
+    font-size: 16px;
+    line-height: 1.5;
+    margin-top: 20px;
+    font-family:'Poppins', sans-serif; 
 }
 
 .get-started-button {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 20px;
+    margin-top: -374px;
 }
 
 .button-63 {
@@ -238,27 +273,35 @@ footer {
 
 
 
+
 .content-container {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 40px;
 }
 
 /* Add a box around the inputForm */
 .form-container {
     width: 100%;
     max-width: 100%;  /* Adjust this if you want a maximum width */
-    margin: 30px;
+    margin: 30px auto;
     border: 2px solid #f4f4f6;
     border-radius: 10px;
     padding: 20px;
     background-color: #fbffff;
 }
 
-/* Style for the inputForm */
-.container.inputForm {
-    width: 50%; /* Set the width to 100% */
+.form-container h2 {
+    font-family: 'Poppins', sans-serif; 
+    font-size: 20px;
+    font-weight: lighter;
+}
+
+.form-container label {
+    font-family: 'Poppins', sans-serif; 
+    font-size: 16px;
+    font-weight: lighter;
 }
 
 /* Media query for smaller screens */
@@ -267,6 +310,8 @@ footer {
         width: 90%;
     }
 }
+
+
 
 /* Phone */
 
@@ -394,31 +439,42 @@ footer {
     animation-delay: 1s;
 }
 
+@media (max-width: 768px) {
+    .form-container {
+        width: 100%;
+    }
+}
+
+
+
+
+
+
 .swing {
     position: absolute;
     top: 240px;
-    left: 380px;
+    left: 140px;
     width: 6%;
 }
 
 .baseball {
     position: absolute;
     top: 270px;
-    right: 360px;
+    right: 180px;
     width: 10%;
 }
 
 .biking {
     position: absolute;
     top: 540px;
-    left: 350px;
+    left: 120px;
     width: 8%;
 }
 
 .skate {
     position: relative;
     top: -520px;
-    left: 360px;
+    left: 720px;
     transform: rotate(25deg);
     width: 75%;
 }
