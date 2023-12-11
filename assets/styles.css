@@ -21,17 +21,21 @@ main {
 header {
     background-color: var(--mainOffWhite);
     padding: 10px;
+    background-image: linear-gradient(144deg, #AF40FF, #5B42F3 50%, #00DDEB);
+    color: var(--mainOffWhite);
 }
 
-
+a.header-navCTA {
+    color: var(--mainOffWhite);
+}
 
 footer {
-    background-color: var(--mainOffWhite);
+    background-image: linear-gradient(144deg, #AF40FF, #5B42F3 50%, #00DDEB);
     padding: 10px;
     display: flex;
     justify-content: flex-end;
     order: 3;
-    font-family:'Poppins', sans-serif; 
+    font-family: 'Poppins', sans-serif;
 }
 
 
@@ -46,7 +50,7 @@ footer {
     align-items: center;
     font-family: 'Poppins', sans-serif;
     justify-content: space-between;
-    
+
 }
 
 
@@ -139,8 +143,8 @@ footer {
 
 .dynamic-txts li {
     list-style: none;
-    color: var( --mainGradientBlue);
-    font-family:'Poppins', sans-serif;
+    color: var(--mainGradientBlue);
+    font-family: 'Poppins', sans-serif;
     font-size: 96px;
     font-weight: 400;
     position: relative;
@@ -186,7 +190,7 @@ footer {
 /* Media Query for mobile devices*/
 @media (max-width: 768px) {
     .dynamic-txts li {
-        font-size: 18px; 
+        font-size: 18px;
     }
 }
 
@@ -199,7 +203,7 @@ footer {
         display: none;
     }
 }
-    
+
 @media (max-width: 768px) {
     .dynamic-txts {
         display: none;
@@ -217,7 +221,7 @@ footer {
     text-align: center;
     margin-top: 20px;
     font-size: 24px;
-    font-family:'Poppins', sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 .app-description p {
@@ -225,7 +229,7 @@ footer {
     font-size: 16px;
     line-height: 1.5;
     margin-top: 20px;
-    font-family:'Poppins', sans-serif; 
+    font-family: 'Poppins', sans-serif;
 }
 
 .get-started-button {
@@ -284,7 +288,7 @@ footer {
 /* Box around the inputForm */
 .form-container {
     width: 100%;
-    max-width: 100%;  
+    max-width: 100%;
     margin: 30px auto;
     border: 2px solid #f4f4f6;
     border-radius: 10px;
@@ -293,13 +297,13 @@ footer {
 }
 
 .form-container h2 {
-    font-family: 'Poppins', sans-serif; 
+    font-family: 'Poppins', sans-serif;
     font-size: 20px;
     font-weight: lighter;
 }
 
 .form-container label {
-    font-family: 'Poppins', sans-serif; 
+    font-family: 'Poppins', sans-serif;
     font-size: 16px;
     font-weight: lighter;
 }
@@ -344,18 +348,20 @@ footer {
 
 .phone-slideshow-list li:nth-child(6) {
     background-image: url('');
-  }
+}
 
-  .phone-slideshow-list li:nth-child(7) {
-    background-image: url(''); 
-  }
-  .phone-slideshow-list li:nth-child(8) {
-    background-image: url(''); 
-  }
-  .phone-slideshow-list li:nth-child(9) {
-    background-image: url(''); 
-  }
- 
+.phone-slideshow-list li:nth-child(7) {
+    background-image: url('');
+}
+
+.phone-slideshow-list li:nth-child(8) {
+    background-image: url('');
+}
+
+.phone-slideshow-list li:nth-child(9) {
+    background-image: url('');
+}
+
 
 
 
@@ -406,7 +412,8 @@ footer {
     list-style: none;
     position: absolute;
     top: 0;
-    left: 0;;
+    left: 0;
+    ;
     width: 100%;
     height: 100%;
     margin: 0;
@@ -425,6 +432,7 @@ footer {
     position: relative;
 
 }
+
 .phone-slideshow-list li img {
     width: 100%;
     height: 100%;

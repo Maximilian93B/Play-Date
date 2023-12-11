@@ -6,8 +6,11 @@ const submitButton = document.getElementById("submitButton");
 const resultsContainer = document.getElementById("resultsContainer");
 
 // API Constants
+
 const apiURL = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${lat},${lng}&radius=${radius}&types=${selectedTypes}&key=${AIzaSyDspXXMTdpqT9m3s1E7ZiZZgjE7t3sGzy8}"; // Replace with your actual API URL
 const apiKey = "AIzaSyDspXXMTdpqT9m3s1E7ZiZZgjE7t3sGzy8"; // Replace with your actual API Key
+
+
 
 // Event Listeners
 document.addEventListener("DOMContentLoaded", function() {
@@ -87,6 +90,7 @@ function responseData(data) {
     }
 }
 
+
 function initMap() {
 const map = new google.maps.Map(document.getElementById('googleMaps'),{
   center:{lat:48.5554, lng:-87.4594},
@@ -95,6 +99,7 @@ const map = new google.maps.Map(document.getElementById('googleMaps'),{
 });
 
 }
+
 // Example usage
 const latitude = 48.5554; // Replace with your latitude
 const longitude = -87.4594; // Replace with your longitude
