@@ -42,18 +42,24 @@ submitButton.addEventListener("click", function (event ) {
     console.log ("Form Submitted with location:",location);
     
    
-    //fetchGoogleMapsData(location,selectedActivites);
-
-});
-
-// function to put selected activites from checkboxes into array and declare in variable
-function getSelectedActivities() { 
+   
+   // function to put selected activites from checkboxes into array and declare in variable
+   function getSelectedActivities() { 
     const checkboxes = document.querySelectorAll('input[name="favoriteActivity"]:checked');
     const selectedActivites = Array.from(checkboxes).map(checkbox => checkbox.value);
     return selectedActivites; 
 
+   //fetchGoogleMapsData(location,selectedActivites);
 
-}
+    
+    }
+
+
+});
+
+
+
+
 
 
 

@@ -8,14 +8,14 @@
     --mainGradientLightBlue: #14d4ec;
 }
 
-
-body {
+main {
     margin: 0;
     padding: 0;
     display: flex;
     box-sizing: border-box;
     flex-direction: column;
     font-size: 16px;
+    background-color: white;
 }
 
 header {
@@ -281,10 +281,10 @@ footer {
     padding: 40px;
 }
 
-/* Add a box around the inputForm */
+/* Box around the inputForm */
 .form-container {
     width: 100%;
-    max-width: 100%;  /* Adjust this if you want a maximum width */
+    max-width: 100%;  
     margin: 30px auto;
     border: 2px solid #f4f4f6;
     border-radius: 10px;
