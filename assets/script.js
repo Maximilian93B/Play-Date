@@ -60,65 +60,6 @@ submitButton.addEventListener("click", function (event ) {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // function to render results from Google APIs into results containers
 function renderResults(places) {
     resultsContainer.innerHTML = ""; 
@@ -143,18 +84,7 @@ function renderResults(places) {
 
 
 
-
-
-
-
-
-
-
-
-
-
 });
-/*
 
 
 function fetchGooglePlacesData(lat, lng, numPeople, selectedActivites){
@@ -229,19 +159,4 @@ fetchGooglePlacesData(latitude, longitude, numberOfPeople, activities);
                 - ex. somethingSomething(places)
     Catch to handle errors 
         - 
-*/
-/* 
-   Displaying the results
-   - Make a function to display results
-       - Call the container using var/const and use querySelector or getElementById
-       - Clear previous results
-
-       - Make a loop to display and generate results in containers
-           - Loop logic using forEach
-
-           places.forEach(place => {
-               - const yourElement = document.createElement("WhateverElementYouWantToCreate");
-               - yourElement.innerHTML = `<h3>${place.name}</h3>`; // We can dynamically add content
-               - resultsContainer.appendChild(yourElement); // Add content where you want
-           });
 */
