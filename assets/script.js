@@ -4,7 +4,7 @@
 document.addEventListener("DOMContentLoaded", function() { 
 
     
-});
+
 // Declare all variables (const, let , var) --> We can Declare API url and Key so we dont need to C&P every time. 
  
 const startButton = document.getElementById("startButton")
@@ -24,7 +24,7 @@ const apiKey = apiKey
 startButton.addEventListener("click", function () {
     console.log("Get Started Button Clicked");
     inputForm.scrollIntoView({ behavior: "smooth" });
-
+}
 
     //Handle Form submission --> add Event to "Submit Button" --> API form Data and then triggger Google Maps API
 
@@ -141,4 +141,4 @@ var numberOfPeople = 4;
 var activities = ['outdoor', 'swimming', 'trails', 'adventure', 'indoor', 'educational'];
 
 fetchGooglePlacesData(latitude, longitude, numberOfPeople, activities);
-
+});
