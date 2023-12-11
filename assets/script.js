@@ -27,6 +27,7 @@ startButton.addEventListener("click", function () {
     inputForm.scrollIntoView({ behavior: "smooth" });
 });
 
+
 // Event listner to handle form
 submitButton.addEventListener("click", function (event ) {
     event.preventDefault();
@@ -155,50 +156,60 @@ function renderResults(places) {
 });
 /*
 
-    //Handle Form submission --> add Event to "Submit Button" --> API form Data and then triggger Google Maps API
 
-/* Form submission 
-- Add event listener to button 
-    - we might have to prevent default form submission
-    
-Declare the const/var we need to use to get the Data from the form
-    - location/numofPeople
+function fetchGooglePlacesData(lat, lng, numPeople, selectedActivites){
+const apiKey ='AIzaSyDspXXMTdpqT9m3s1E7ZiZZgjE7t3sGzy8'; // put api key
+const radius = 4000; //raduis for the search
 
-Declare const/var to get selected activities from check boxes
-    - querySelector  and then we can run a forEach loop to run through all the checkboxes. 
-    - console.log all selected data from checkboxes 
+const types = {
+  outdoor: 'park',
+  swimming: 'swimming_pool',
+  trails: 'hiking',
+  adventure: 'rock_climbing',
+  indoor: 'arts_crafts',
+  educational:'puzzles'
+};
 
+const selectedTypes = selectedActivites.map(activity =>types[activity]).join('|');
+  
+   const apiUrl = `https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${lat},${lng}&radius=${radius}&types=${selectedTypes}&key=${AIzaSyDspXXMTdpqT9m3s1E7ZiZZgjE7t3sGzy8}`;
 
-Trigger Google Maps API 
-    - need to use all 3 inputs (location, numofPeople, selected Activites)
-*/
+  fetch(apiUrl)
+  .then(response => response.json())
+  .then(data => {
+    ResponseData(data);
+  })
+  .catch(error => {
+    console.error('Error fetching data:', error);
+  });
+}
 
-/* Function for calling APIs 
+function ResponseData(data) {
+if (data && data.results) {
+  if (data.results.length === 0) {
+    console.log ('No results found');
+  } else {
+    console.log('Places Found:');
+    data.results.forEach(place => {
+      console.log('Place Name:', place.name);
+      console.log('Place Address:', place.vicinity);
+  });
+}
+} else {
 
-Make Function for calling Google Maps API --> We should tihnk about using GeoCode 
-    - We need to call the 3 inputs again 
-    - If we use Geo Code we will have to change the way the users input the data 
-GeoCode 
-    -  variable.geocode({ address: location }
-        - conditional statement to handle OK statement from API 
-    
-    - Get Lat/Long from first results fetch
-        - set variables for lat/long with results[0]--> will be returned in a Array and location lat()/lng()
-*/
+  console.log('No results');
+}
+console.log('Data received', data);
+}
 
+const latitude = 48.5554;
+const longitude = -87.4594;
+const numberOfPeople = 4;
+const activities = ['outdoor', 'swimming', 'trails', 'adventure', 'indoor', 'educational'];
 
-/*
-Make Fetch Function after getting Geo coding results to obtain users location
-
-        - Fet Google Maps API with (lat,lng,numPeople, selectedActivites)
-        - make conditional statement in the console if error occurs fetching data 
-
-*/
-
-/*
-
-Fetch Function Template 
-
+fetchGooglePlacesData(latitude, longitude, numberOfPeople, activities);
+});
+=======
 -Fetch data from google using obtained co-ords from geo results and selectedActivites 
     
     - use apiUrl variable
