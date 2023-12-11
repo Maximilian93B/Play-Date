@@ -25,6 +25,7 @@ startButton.addEventListener("click", function () {
     console.log("Get Started Button Clicked");
     inputForm.scrollIntoView({ behavior: "smooth" });
 
+
     //Handle Form submission --> add Event to "Submit Button" --> API form Data and then triggger Google Maps API
 
 /* Form submission 
@@ -89,18 +90,55 @@ Fetch Function Template
     Catch to handle errors 
         - 
 */
-/* 
-   Displaying the results
-   - Make a function to display results
-       - Call the container using var/const and use querySelector or getElementById
-       - Clear previous results
+function fetchGooglePlacesData(lat, lng, numPeople, selectedActivites){
+var apiKey ='AIzaSyDspXXMTdpqT9m3s1E7ZiZZgjE7t3sGzy8'; // put api key
+var radius = 4000; //raduis for the search
 
-       - Make a loop to display and generate results in containers
-           - Loop logic using forEach
+var types = {
+  outdoor: 'park',
+  swimming: 'swimming_pool',
+  trails: 'hiking',
+  adventure: 'rock_climbing',
+  indoor: 'arts_crafts',
+  educational:'puzzles'
+};
 
-           places.forEach(place => {
-               - const yourElement = document.createElement("WhateverElementYouWantToCreate");
-               - yourElement.innerHTML = `<h3>${place.name}</h3>`; // We can dynamically add content
-               - resultsContainer.appendChild(yourElement); // Add content where you want
-           });
-*/
+var selectedTypes = selectedActivites.map(activity =>types[activity]).join('|');
+  
+   var apiUrl = `https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${lat},${lng}&radius=${radius}&types=${selectedTypes}&key=${AIzaSyDspXXMTdpqT9m3s1E7ZiZZgjE7t3sGzy8}`;
+
+  fetch(apiUrl)
+  .then(response => response.json())
+  .then(data => {
+    ResponseData(data);
+  })
+  .catch(error => {
+    console.error('Error fetching data:', error);
+  });
+}
+
+function ResponseData(data) {
+if (data && data.results) {
+  if (data.results.length === 0) {
+    console.log ('No results found');
+  } else {
+    console.log('Places Found:');
+    data.results.forEach(place => {
+      console.log('Place Name:', place.name);
+      console.log('Place Address:', place.vicinity);
+  });
+}
+} else {
+
+  console.log('No results');
+}
+console.log('Data received', data);
+}
+
+var latitude = 48.5554;
+var longitude = -87.4594;
+var numberOfPeople = 4;
+var activities = ['outdoor', 'swimming', 'trails', 'adventure', 'indoor', 'educational'];
+
+fetchGooglePlacesData(latitude, longitude, numberOfPeople, activities);
+
