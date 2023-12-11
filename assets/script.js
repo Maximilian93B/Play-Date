@@ -6,8 +6,11 @@ const submitButton = document.getElementById("submitButton");
 const resultsContainer = document.getElementById("resultsContainer");
 
 // API Constants
-const apiURL = "add your API URL here"; // Replace with your actual API URL
-const apiKey = "add your API Key here"; // Replace with your actual API Key
+
+const apiURL = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${lat},${lng}&radius=${radius}&types=${selectedTypes}&key=${AIzaSyDspXXMTdpqT9m3s1E7ZiZZgjE7t3sGzy8}"; // Replace with your actual API URL
+const apiKey = "AIzaSyDspXXMTdpqT9m3s1E7ZiZZgjE7t3sGzy8"; // Replace with your actual API Key
+
+
 
 // Event Listeners
 document.addEventListener("DOMContentLoaded", function() {
@@ -28,6 +31,7 @@ document.addEventListener("DOMContentLoaded", function() {
         fetchGooglePlacesData(location, selectedActivities);
     });
 });
+
 
 // Function to get selected activities from checkboxes
 function getSelectedActivities() {
@@ -66,7 +70,7 @@ function fetchGooglePlacesData(location, selectedActivities) {
     const selectedTypes = selectedActivities.map(activity => types[activity]).join('|');
     const apiUrl = `${apiURL}?location=${location}&radius=${radius}&types=${selectedTypes}&key=${apiKey}`;
 
-    fetch(apiUrl)
+    fetch(apiURL)
     .then(response => response.json())
     .then(data => responseData(data))
     .catch(error => console.error('Error fetching data:', error));
@@ -84,6 +88,16 @@ function responseData(data) {
     } else {
         console.log('No results found');
     }
+}
+
+
+function initMap() {
+const map = new google.maps.Map(document.getElementById('googleMaps'),{
+  center:{lat:48.5554, lng:-87.4594},
+  zoom: 8
+
+});
+
 }
 
 // Example usage
