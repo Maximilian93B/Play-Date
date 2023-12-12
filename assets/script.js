@@ -19,6 +19,8 @@ document.addEventListener("DOMContentLoaded", function() {
         inputForm.scrollIntoView({ behavior: "smooth" });
     });
 
+
+
     submitButton.addEventListener("click", function(event) {
         event.preventDefault();
         console.log("Submit Button Clicked");
@@ -31,6 +33,8 @@ document.addEventListener("DOMContentLoaded", function() {
         fetchGooglePlacesData(location, selectedActivities);
     });
 });
+
+
 
 
 // Function to get selected activities from checkboxes
@@ -100,9 +104,9 @@ const map = new google.maps.Map(document.getElementById('googleMaps'),{
 
 }
 
-// Example usage
-const latitude = 48.5554; // Replace with your latitude
-const longitude = -87.4594; // Replace with your longitude
-const numberOfPeople = 4; // Adjust as needed
+
+const latitude = 48.5554; 
+const longitude = -87.4594; 
+const numberOfPeople = 4; 
 const activities = ['outdoor', 'swimming', 'trails', 'adventure', 'indoor', 'educational'];
 fetchGooglePlacesData(`${latitude},${longitude}`, activities);
