@@ -636,30 +636,37 @@ footer {
 
 
 @media (min-width: 768px) {
-        {
 
-        /* This is a medium breakpoint. */
+
+    /* This is a medium breakpoint. */
+    .descriptionParagraph {
+        padding-top: 17rem;
+        display: block;
     }
-}
 
-@media (min-width: 992px) {
-        {
+    @media (min-width: 820px) {
 
         /* This is a large breakpoint. */
+        .descriptionParagraph {
+            padding-top: 3rem;
+            display: block;
+        }
     }
-}
-
-@media (min-width: 1024px) {
-
-        {}
-
-    /* This is a largest breakpoint. */
-}
 
 
-@media (min-width: 1400px) {
-        {
+    @media (min-width: 1024px) {
 
-        /* This is the largest breakpoint. Looks good */
+        /* This is a larger breakpoint. */
+        .descriptionParagraph {
+            padding-top: 2rem;
+            display: block;
+        }
     }
-}
+
+
+    /*@media (min-width: 1400px) {
+            {
+
+            This is the largest breakpoint. Looks good
+        }
+    } */
