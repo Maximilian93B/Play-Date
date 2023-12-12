@@ -23,6 +23,7 @@ header {
     padding: 10px;
     background-image: linear-gradient(144deg, #AF40FF, #5B42F3 50%, #00DDEB);
     color: var(--mainOffWhite);
+    height: 15vh;
 }
 
 a.header-navCTA {
@@ -36,6 +37,7 @@ footer {
     justify-content: flex-end;
     order: 3;
     font-family: 'Poppins', sans-serif;
+    height: 15vh;
 }
 
 .hide {
