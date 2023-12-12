@@ -616,13 +616,21 @@ footer {
 }
 
 /* Media Query for diff size screens*/
-@media (max-width: 576px) {
-
+@media (max-width: 390px) {
 
     /* This is a small breakpoint. */
     .descriptionParagraph {
+        padding-top: 17rem;
+        display: block;
+    }
+}
 
-        padding-top: 17rem
+@media (max-width: 576px) {
+
+    /* This is a small breakpoint. */
+    .descriptionParagraph {
+        padding-top: 17rem;
+        display: block;
     }
 }
 
