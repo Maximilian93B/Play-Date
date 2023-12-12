@@ -7,7 +7,7 @@ const resultsContainer = document.getElementById("resultsContainer");
 
 // API Constants
 
-const apiURL = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${lat},${lng}&radius=${radius}&types=${selectedTypes}&key=${AIzaSyDspXXMTdpqT9m3s1E7ZiZZgjE7t3sGzy8}"; // Replace with your actual API URL
+const apiURL = "https://maps.googleapis.com/maps/api/place/nearbysearch/json"; // Replace with your actual API URL
 const apiKey = "AIzaSyDspXXMTdpqT9m3s1E7ZiZZgjE7t3sGzy8"; // Replace with your actual API Key
 
 
@@ -61,7 +61,7 @@ function renderResults(places) {
 
 // Fetch Google Places Data
 function fetchGooglePlacesData(location, selectedActivities) {
-    const radius = 4000;
+    const radius = 10000;
     const types = {
         outdoor: 'park',
         swimming: 'swimming_pool',
@@ -70,11 +70,12 @@ function fetchGooglePlacesData(location, selectedActivities) {
         indoor: 'arts_crafts',
         educational: 'puzzles'
     };
-
+    const latitude = '46.0878' 
+    const longitude = '-64.7782' 
     const selectedTypes = selectedActivities.map(activity => types[activity]).join('|');
-    const apiUrl = `${apiURL}?location=${location}&radius=${radius}&types=${selectedTypes}&key=${apiKey}`;
+    const buildApiUrl = `${apiURL}?location=${latitude},${longitude}&radius=${radius}&type=zoo&key=${apiKey}`;
 
-    fetch(apiURL)
+    fetch(buildApiUrl)
     .then(response => response.json())
     .then(data => responseData(data))
     .catch(error => console.error('Error fetching data:', error));
@@ -109,4 +110,4 @@ const latitude = 48.5554;
 const longitude = -87.4594; 
 const numberOfPeople = 4; 
 const activities = ['outdoor', 'swimming', 'trails', 'adventure', 'indoor', 'educational'];
-fetchGooglePlacesData(`${latitude},${longitude}`, activities);
+//fetchGooglePlacesData(`${latitude},${longitude}`, activities);
