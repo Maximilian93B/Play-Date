@@ -616,15 +616,16 @@ footer {
 }
 
 /* Media Query for diff size screens*/
-@media (min-width: 576px) {
-        {
+@media (max-width: 576px) {
 
-        /* This is a small breakpoint. */
-        .descriptionParagraph {
-            display: none;
-        }
+
+    /* This is a small breakpoint. */
+    .descriptionParagraph {
+
+        padding-top: 17rem
     }
 }
+
 
 @media (min-width: 768px) {
         {
@@ -642,9 +643,7 @@ footer {
 
 @media (min-width: 1024px) {
 
-    .descriptionParagraph {
-        display: none;
-    }
+        {}
 
     /* This is a largest breakpoint. */
 }
