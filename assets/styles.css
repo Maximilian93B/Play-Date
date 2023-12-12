@@ -38,7 +38,9 @@ footer {
     font-family: 'Poppins', sans-serif;
 }
 
-
+.hide {
+    visibility: none;
+}
 
 .bodyContent {
     display: flex;
@@ -66,8 +68,10 @@ footer {
 
 .header-logo {
     /*max-width: 100px; */
-    max-width: auto;
-    height: auto;
+    /*max-width: auto;
+    height: auto;*/
+    height: 10rem;
+    width: 25;
     display: inline-block;
 }
 
