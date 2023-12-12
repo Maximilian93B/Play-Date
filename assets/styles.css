@@ -65,14 +65,18 @@ footer {
 .header-section.middle {
     order: 2;
     text-align: center;
-    margin-right: 150px;
+    /*margin-right: 150px; */
 }
 
 .header-logo {
     /*max-width: 100px; */
     /*max-width: auto;
     height: auto;*/
-    height: 10rem;
+    margin-right: auto;
+    margin-left: auto;
+    justify-content: center;
+    align-items: center;
+    height: 15vh;
     width: 25;
     display: inline-block;
 }
