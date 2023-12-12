@@ -617,36 +617,42 @@ footer {
 
 /* Media Query for diff size screens*/
 @media (min-width: 576px) {
-    body::before {
-        content: "/";
+        {
+
         /* This is a small breakpoint. */
+        .descriptionParagraph {
+            display: none;
+        }
     }
 }
 
 @media (min-width: 768px) {
-    body::before {
-        content: "/";
+        {
+
         /* This is a medium breakpoint. */
     }
 }
 
 @media (min-width: 992px) {
-    body::before {
-        content: "LG";
+        {
+
         /* This is a large breakpoint. */
     }
 }
 
-@media (min-width: 1200px) {
-    body::before {
-        content: "/";
-        /* This is a largest breakpoint. */
+@media (min-width: 1024px) {
+
+    .descriptionParagraph {
+        display: none;
     }
+
+    /* This is a largest breakpoint. */
 }
 
+
 @media (min-width: 1400px) {
-    body::before {
-        content: "/";
-        /* This is the largest breakpoint. */
+        {
+
+        /* This is the largest breakpoint. Looks good */
     }
 }
