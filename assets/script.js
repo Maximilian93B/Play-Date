@@ -7,6 +7,8 @@ const resultsContainer = document.getElementById("resultsContainer");
 const activityDropdown = document.getElementById("dropdown");
 // API Constants
 
+let map;
+
 const apiURL = "https://maps.googleapis.com/maps/api/place/nearbysearch/json"; // Replace with your actual API URL
 const apiKey = "AIzaSyDspXXMTdpqT9m3s1E7ZiZZgjE7t3sGzy8"; // Replace with your actual API Key
 
@@ -84,12 +86,14 @@ function responseData(data) {
         data.results.forEach(place => {
             console.log('Place Name:', place.name);
             console.log('Place Address:', place.vicinity);
+            addMarker(place);
         });
         renderResults(data.results);
     } else {
         console.log('No results found');
     }
 }
+
 
 
 function initMap() {
@@ -99,6 +103,24 @@ const map = new google.maps.Map(document.getElementById('googleMaps'),{
 
 });
 
+}
+
+function addMarker(place) {
+    console.log (place)
+    const marker = new google.maps.Marker({
+        position: {lat: place.geometry.location.lat, lng: place.geometry.location.lng},
+        map: map,
+        title: place.name
+    });
+
+    // Optional: Add an info window for each marker
+    const infowindow = new google.maps.InfoWindow({
+        content: `<div><strong>${place.name}</strong><br>${place.vicinity}</div>`
+    });
+
+    marker.addListener('click', () => {
+        infowindow.open(map, marker);
+    });
 }
 
 
