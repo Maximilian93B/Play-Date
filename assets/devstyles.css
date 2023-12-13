@@ -12,7 +12,7 @@ main {
 
 html,
 body {
-
+    margin: 0;
     font-family: 'Poppins', sans-serif;
 }
 
@@ -32,6 +32,8 @@ footer {
 body.container {
     padding: 0 !important;
     margin: 0 !important;
+    width: 100vw;
+    overflow-x: hidden;
 }
 
 img {
@@ -51,11 +53,6 @@ img {
     box-shadow: 10px 5px 5px black;
 }
 
-
-
-
-
-
 .profPic {
     border-radius: 40%;
     width: 200px;
@@ -69,8 +66,7 @@ img {
 
 .alignRight {
     display: flex;
-    padding-left: 75%;
-    ;
+    padding-left: 50%;
     justify-content: flex-end;
     align-items: center;
     width: 50%;
