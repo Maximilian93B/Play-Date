@@ -4,7 +4,7 @@ const inputForm = document.getElementById("activity-form");
 const locationInput = document.getElementById("locationInput");
 const submitButton = document.getElementById("submitButton");
 const resultsContainer = document.getElementById("resultsContainer");
-
+const activityDropdown = document.getElementById("dropdown");
 // API Constants
 
 const apiURL = "https://maps.googleapis.com/maps/api/place/nearbysearch/json"; // Replace with your actual API URL
@@ -26,22 +26,13 @@ document.addEventListener("DOMContentLoaded", function() {
         console.log("Submit Button Clicked");
 
         const location = locationInput.value;
-        const selectedActivities = getSelectedActivities();
-        console.log("Selected Activities:", selectedActivities);
-        console.log("Form Submitted with location:", location);
+        const selectedActivity = activityDropdown.value;
+        console.log("Selected Activity:", selectedActivity);
+        console.log("Form Submitted with location:", location, selectedActivity);
 
-        fetchGooglePlacesData(location, selectedActivities);
+        fetchGooglePlacesData(location, selectedActivity);
     });
 });
-
-
-
-
-// Function to get selected activities from checkboxes
-function getSelectedActivities() {
-    const checkboxes = document.querySelectorAll('input[name="favoriteActivity"]:checked');
-    return Array.from(checkboxes).map(checkbox => checkbox.value);
-}
 
 // Function to render results from Google APIs into results container
 function renderResults(places) {
@@ -59,20 +50,26 @@ function renderResults(places) {
     });
 }
 
-// Fetch Google Places Data
-function fetchGooglePlacesData(location, selectedActivities) {
-    const radius = 10000;
+// Function to map the selected activity to Google Places API type
+function mapActivityToType(activity) {
     const types = {
-        outdoor: 'park',
-        animals: 'zoo',
-        amusement: 'amusement_park',
-        camp: 'campground',
-        bowling: 'bowling_alley'
+        option1: 'park',
+        option2: 'zoo',
+        option3: 'amusement_park',
+        option4: 'campground',
+        option5: 'bowling_alley'
     };
+    return types[activity] || 'park'; // Default to 'park' if no match
+}
+
+
+// Fetch Google Places Data
+function fetchGooglePlacesData(location, selectedActivity) {
+    const radius = 10000;
+    const type = mapActivityToType(selectedActivity);
     const latitude = '46.0878';
     const longitude = '-64.7782'; 
-    const selectedTypes = selectedActivities.map(activity => types[activity]).join('|');
-    const buildApiUrl = `${apiURL}?location=${latitude},${longitude}&radius=${radius}&types=${selectedTypes}&key=${apiKey}`;
+    const buildApiUrl = `${apiURL}?location=${latitude},${longitude}&radius=${radius}&type=${type}&key=${apiKey}`
     
     fetch(buildApiUrl)
     .then(response => response.json())
