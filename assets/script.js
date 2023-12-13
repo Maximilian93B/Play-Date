@@ -64,17 +64,16 @@ function fetchGooglePlacesData(location, selectedActivities) {
     const radius = 10000;
     const types = {
         outdoor: 'park',
-        swimming: 'swimming_pool',
-        trails: 'hiking',
-        adventure: 'rock_climbing',
-        indoor: 'arts_crafts',
-        educational: 'puzzles'
+        animals: 'zoo',
+        amusement: 'amusement_park',
+        camp: 'campground',
+        bowling: 'bowling_alley'
     };
-    const latitude = '46.0878' 
-    const longitude = '-64.7782' 
+    const latitude = '46.0878';
+    const longitude = '-64.7782'; 
     const selectedTypes = selectedActivities.map(activity => types[activity]).join('|');
-    const buildApiUrl = `${apiURL}?location=${latitude},${longitude}&radius=${radius}&type=zoo&key=${apiKey}`;
-
+    const buildApiUrl = `${apiURL}?location=${latitude},${longitude}&radius=${radius}&types=${selectedTypes}&key=${apiKey}`;
+    
     fetch(buildApiUrl)
     .then(response => response.json())
     .then(data => responseData(data))
@@ -98,7 +97,7 @@ function responseData(data) {
 
 function initMap() {
 const map = new google.maps.Map(document.getElementById('googleMaps'),{
-  center:{lat:48.5554, lng:-87.4594},
+  center:{lat:46.0878, lng:-64.7782},
   zoom: 8
 
 });
