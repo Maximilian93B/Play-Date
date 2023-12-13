@@ -27,6 +27,7 @@ footer {
     height: 17vh;
     width: 100%;
     font-family: 'Poppins', sans-serif;
+    height: 200px;
 }
 
 body.container {
@@ -36,8 +37,14 @@ body.container {
     overflow-x: hidden;
 }
 
+h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 img {
-    border-radius: 40%;
+
     width: 200px;
     height: auto;
 }
