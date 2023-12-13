@@ -102,7 +102,6 @@ const map = new google.maps.Map(document.getElementById('googleMaps'),{
   zoom: 8
 
 });
-
 }
 
 function addMarker(place) {
