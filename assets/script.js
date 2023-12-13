@@ -8,6 +8,8 @@ const activityDropdown = document.getElementById("dropdown");
 
 // API Constants
 
+let map;
+
 const apiURL = "https://maps.googleapis.com/maps/api/place/nearbysearch/json"; // Replace with your actual API URL
 const apiKey = "AIzaSyDspXXMTdpqT9m3s1E7ZiZZgjE7t3sGzy8"; // Replace with your actual API Key
 
@@ -94,42 +96,37 @@ function fetchGooglePlacesData(location, selectedActivity) {
 function responseData(data) {
     if (data?.results?.length > 0) {
         console.log('Places Found:');
-        data.results.forEach(place => {
-            console.log('Place Name:', place.name);
-            console.log('Place Address:', place.vicinity);
-            addMarker(place);
-        });
+        renderMarkers(data.results);
         renderResults(data.results);
     } else {
         console.log('No results found');
     }
 }
 
-let map;
 
 function initMap() {
-const map = new google.maps.Map(document.getElementById('googleMaps'),{
-  center:{lat:46.0878, lng:-64.7782},
-  zoom: 8
-
+const myLatLng = {lat: 46.0878, lng: -64.7782};
+map = new google.maps.Map(document.getElementById('googleMaps'),{
+  center: myLatLng,
+  zoom: 10
 });
+
 }
 
-function addMarker(place) {
-    if (!place.geometry || !place.geometry.location) {
-        console.log('Place has no location data:', place);
-        return;
-    }
-    const marker = new google.maps.Marker({
+function renderMarkers(places) {
+    places.forEach(place => {
+      const marker = new google.maps.Marker({
         position: {lat: place.geometry.location.lat, lng: place.geometry.location.lng},
         map: map,
         title: place.name
     });
+
+    const infowindow = new google.maps.InfoWindow({
+        content: `<div><strong>${place.name}</strong><br>${place.vicinity}</div>`
+    });
+
+    marker.addListener('click', () => {
+        infowindow.open(map, marker);
+    });
+  });
 }
-
-
-const latitude = 48.5554; 
-const longitude = -87.4594; 
-const numberOfPeople = 4; 
-const activities = ['outdoor', 'swimming', 'trails', 'adventure', 'indoor', 'educational'];
-//fetchGooglePlacesData(`${latitude},${longitude}`, activities);
