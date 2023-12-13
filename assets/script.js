@@ -93,12 +93,19 @@ function responseData(data) {
 
 
 function initMap() {
+  const myLatLng = { lat: 46.0878, lng: -64.7782 };
 const map = new google.maps.Map(document.getElementById('googleMaps'),{
-  center:{lat:46.0878, lng:-64.7782},
-  zoom: 8
+  center: myLatLng,
+  zoom: 10
 
 });
+new google.maps.Marker({
+  position: myLatLng,
+  map,
+  title: "Hello World!"
+});
 
+marker.setMap(map);
 }
 
 
