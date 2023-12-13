@@ -22,7 +22,7 @@
         <div class="bodyContent">
 
             <div class="header-section start">
-                <a class="header-navCTA " href="/About">About</a>
+                <a class="header-navCTA " href="#appDescription">About</a>
                 <a class="header-navCTA " href="/contact">Contact</a>
                 <a class="header-navCTA " href="/dev.html">Developers</a>
             </div>
@@ -110,30 +110,30 @@
                         <label for="locationInput" class="InputText">Location: </label>
                         <input type="text" id="locationInput" placeholder="Enter location">
                     </div>
-                
+
                     <div class="sectionBottomSpacing"></div>
                     <h2>What type of activity interests you? <br><span class="additionalText"></span></h2>
 
-                <!-- First column of option checkboxes -->
+                    <!-- First column of option checkboxes -->
 
-                <div class="row">
-                    <div class="col-md-4">
-                        <label for="dropdown">Select an option:</label>
-                        <select id="dropdown">
-                            <option value="option1">Park</option>
-                            <option value="option2">Zoo</option>
-                            <option value="option3">Amusement park</option>
-                            <option value="option4">Campground</option>
-                            <option value="option5">Bowling Alley</option>
-                        </select>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <label for="dropdown">Select an option:</label>
+                            <select id="dropdown">
+                                <option value="option1">Park</option>
+                                <option value="option2">Zoo</option>
+                                <option value="option3">Amusement park</option>
+                                <option value="option4">Campground</option>
+                                <option value="option5">Bowling Alley</option>
+                            </select>
 
                         </div>
                     </div>
 
-                </div>
-                
-                <button id="submitButton" type="submit" class="sectionTopSpacing button-63">Submit</button>
-                </form>
+            </div>
+
+            <button id="submitButton" type="submit" class="sectionTopSpacing button-63">Submit</button>
+            </form>
         </div>
 
 
@@ -149,35 +149,16 @@
             <!-- Placeholder for Google Maps Results -->
 
             <div id="resultsContainer" class="mapResults container form-container sectionBottomSpacing">
-                <h2>Results:</h2>
-                <!-- 1st row of results -->
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="result">
-                            <h3>Play Spot 1</h3>
-                            <p>123 Fun Street, Playtown</p>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4">
-                        <div class="result">
-                            <h3>Play Spot 2</h3>
-                            <p>456 Adventure Avenue, Kidsville</p>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4">
-                        <div class="result">
-                            <h3>Play Spot 3</h3>
-                            <p>789 Joy Lane, Totland</p>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title"></h5>
+                            <p class="card-text"></p>
                         </div>
                     </div>
                 </div>
-
-                <!-- 2nd row of results -->
-                <div class="row">
-                    <!-- Add more col-md-4 divs for additional results -->
-                </div>
+            </div>
+                
         </section>
     </main>
 

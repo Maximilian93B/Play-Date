@@ -689,3 +689,30 @@ label {
         }
     } */
 }
+    /* Custom styles for card */
+
+    .card {
+    display: none;
+    margin-bottom: 20px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    transition: box-shadow 0.3s ease;
+
+}
+
+.card:hover {
+    box-shadow: 0 0 15px rgb(255, 255, 255), 
+                 0 0 20px rgba(0, 128, 255, 0.5); 
+}
+
+.card-title {
+    font-family:'Poppins', sans-serif;
+}
+
+.card-text {
+   font-family:  'Poppins', sans-serif;
+}
+
+.mapResults{
+    background-image: linear-gradient(144deg, #AF40FF, #5B42F3 50%, #00DDEB);
+}
+
