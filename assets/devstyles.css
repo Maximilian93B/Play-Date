@@ -34,3 +34,8 @@ body.container {
 .profPic {
     border-radius: 40%
 }
+
+.bodyContent {
+    display: flex;
+    justify-content: space-between;
+}
