@@ -7,6 +7,8 @@ const resultsContainer = document.getElementById("resultsContainer");
 const activityDropdown = document.getElementById("dropdown");
 // API Constants
 
+let map;
+
 const apiURL = "https://maps.googleapis.com/maps/api/place/nearbysearch/json"; // Replace with your actual API URL
 const apiKey = "AIzaSyDspXXMTdpqT9m3s1E7ZiZZgjE7t3sGzy8"; // Replace with your actual API Key
 
@@ -81,36 +83,35 @@ function fetchGooglePlacesData(location, selectedActivity) {
 function responseData(data) {
     if (data?.results?.length > 0) {
         console.log('Places Found:');
-        data.results.forEach(place => {
-            console.log('Place Name:', place.name);
-            console.log('Place Address:', place.vicinity);
-        });
+        renderMarkers(data.results);
         renderResults(data.results);
     } else {
         console.log('No results found');
     }
 }
 
-
 function initMap() {
-  const myLatLng = { lat: 46.0878, lng: -64.7782 };
-const map = new google.maps.Map(document.getElementById('googleMaps'),{
+const myLatLng = {lat: 46.0878, lng: -64.7782};
+map = new google.maps.Map(document.getElementById('googleMaps'),{
   center: myLatLng,
   zoom: 10
-
 });
-new google.maps.Marker({
-  position: myLatLng,
-  map,
-  title: "Hello World!"
-});
-
-marker.setMap(map);
 }
 
+function renderMarkers(places) {
+    places.forEach(place => {
+      const marker = new google.maps.Marker({
+        position: {lat: place.geometry.location.lat, lng: place.geometry.location.lng},
+        map: map,
+        title: place.name
+    });
 
-const latitude = 48.5554; 
-const longitude = -87.4594; 
-const numberOfPeople = 4; 
-const activities = ['outdoor', 'swimming', 'trails', 'adventure', 'indoor', 'educational'];
-//fetchGooglePlacesData(`${latitude},${longitude}`, activities);
+    const infowindow = new google.maps.InfoWindow({
+        content: `<div><strong>${place.name}</strong><br>${place.vicinity}</div>`
+    });
+
+    marker.addListener('click', () => {
+        infowindow.open(map, marker);
+    });
+  });
+}
