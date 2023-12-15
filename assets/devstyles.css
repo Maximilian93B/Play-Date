@@ -41,7 +41,9 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
+
 }
+
 
 img {
 
@@ -69,6 +71,7 @@ img {
 .bodyContent {
     display: flex;
     justify-content: space-between;
+    
 }
 
 .alignRight {

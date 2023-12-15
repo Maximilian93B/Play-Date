@@ -44,7 +44,8 @@ If you encounter CORS (Cross-Origin Resource Sharing) issues while running the a
 **Note:** This is a temporary solution for development purposes and should be used cautiously as it can have security implications.
 
 ## Known Issues
-N/A
+Google Maps may not work on GitHub Live version. Could be API Key issue. Clone repo and open in Chrome with Ext if you cannot see the Maps. 
+
 
 ## Development Team
 - Maximilian Bosch: [GitHub](https://github.com/Maximilian93B/Play-Date)
