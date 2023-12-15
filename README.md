@@ -1,4 +1,4 @@
-# Timed Quiz
+# Date Day
 
 This project is an acivity planning app that takes user inputs such as location and distnace then provides them a google map result of their options which are displayed with map markers.
 
