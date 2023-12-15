@@ -1,4 +1,4 @@
-# Date Day
+# Date Date
 
 This project is an acivity planning app that takes user inputs such as location and distnace then provides them a google map result of their options which are displayed with map markers.
 
@@ -10,7 +10,7 @@ This project is an acivity planning app that takes user inputs such as location 
 
 <img src="assets/images/playdate.png">
 
-## PLay Date Video: unavailable
+## Play Date Video: unavailable
 
 ## Play Date Repo:https://github.com/Maximilian93B/Play-Date
 
@@ -34,7 +34,9 @@ N/A
 
 ## Contributers
 
-N/A
+Maximilian Bosch https://github.com/Maximilian93B/Play-Date
+Ikechukwu Mbanugo https://github.com/imbanu1
+Stephanie Perroni https://github.com/fswDevSteph/Play-Date
 
 ## Known Issues:
 
@@ -42,6 +44,6 @@ N/A
 
 ## Developers:
 
-Maximilian Bosch
-Ikechukwu Mbanugo
-Stephanie Perroni
+Maximilian Bosch https://github.com/Maximilian93B/Play-Date
+Ikechukwu Mbanugo https://github.com/imbanu1
+Stephanie Perroni https://github.com/fswDevSteph/Play-Date
