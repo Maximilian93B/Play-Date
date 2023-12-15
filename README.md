@@ -1,7 +1,8 @@
 # Play Date
 
 ## Project Overview
-Play Date is an activity planning application that takes user inputs such as location and distance to provide Google Maps results with options displayed as map markers.
+What sets PlayDate apart is our user-friendly platform, offering personalized recommendations tailored to your family's interests. Say goodbye to the same old weekend routines and hello to spontaneous family adventures, laughter, and exploration. Whether you're discovering a local museum, taking a leisurely park walk, or seeking thrills at amusement parks, PlayDate is your go-to companion.
+
 
 ### Upcoming Iterations
 1. To be determined
