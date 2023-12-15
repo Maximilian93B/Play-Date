@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         fetchGooglePlacesData(location, selectedActivity).then(() => {
            
-            showCards(); // Call showCards after fetchGooglePlacesData completes
+            showCards(); // showCards after fetchGooglePlacesData completes
         });
     });
 });
