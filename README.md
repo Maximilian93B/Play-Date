@@ -1,49 +1,51 @@
-# Date Date
+# Play Date
 
-This project is an acivity planning app that takes user inputs such as location and distnace then provides them a google map result of their options which are displayed with map markers.
+## Project Overview
+Play Date is an activity planning application that takes user inputs such as location and distance to provide Google Maps results with options displayed as map markers.
 
-## Upcoming Iterations
-
+### Upcoming Iterations
 1. To be determined
 
-## Image of application
+### Image of the Application
+![Play Date App](assets/images/playdate.png)
 
-<img src="assets/images/playdate.png">
+### Play Date Video
+Unavailable
 
-## Play Date Video: unavailable
+### Resources and Tools
+- **Google Places:** [Google Places API](https://mapsplatform.google.com/maps-products/#places-section)
+- **Google Maps:** [Google Maps API](https://mapsplatform.google.com/maps-products/#maps-section)
+- **Google Fonts:** [Google Fonts](https://fonts.google.com/)
+- **MDN Web Docs:** [JavaScript resources](https://developer.mozilla.org/en-US/search?q=JavaScript)
+- **Bootstrap:** [Bootstrap Documentation](https://getbootstrap.com/docs/5.1/getting-started/introduction/)
 
-## Play Date Repo:https://github.com/Maximilian93B/Play-Date
+### Links
+- **GitHub Repository:** [Play Date Repo](https://github.com/Maximilian93B/Play-Date)
+- **Live Project:** [Play Date Live](https://maximilian93b.github.io/Play-Date/)
 
-## Live link to project: https://maximilian93b.github.io/Play-Date/
-
-## Additional resources used:
-
-Google Places: https://mapsplatform.google.com/maps-products/#places-section
-
-Google Maps:https://mapsplatform.google.com/maps-products/#maps-section
-
-Google Fonts: https://fonts.google.com/
-
-Mdn: https://developer.mozilla.org/en-US/search?q=JavaScript
-
-Bootstrap: https://getbootstrap.com/docs/5.1/getting-started/introduction/
-
-## Installation instructions:
-
+### Installation Instructions
 N/A
 
-## Contributers
+## Contributors
+- Maximilian Bosch: [GitHub](https://github.com/Maximilian93B/Play-Date)
+- Ikechukwu Mbanugo: [GitHub](https://github.com/imbanu1)
+- Stephanie Perroni: [GitHub](https://github.com/fswDevSteph/Play-Date)
 
-Maximilian Bosch https://github.com/Maximilian93B/Play-Date
-Ikechukwu Mbanugo https://github.com/imbanu1
-Stephanie Perroni https://github.com/fswDevSteph/Play-Date
+## Handling CORS Issues
+If you encounter CORS (Cross-Origin Resource Sharing) issues while running the app, consider using the "Allow CORS: Access-Control-Allow-Origin" extension for Chrome. This extension can help bypass CORS policies by modifying HTTP request headers. 
 
-## Known Issues:
+### Installation Guide for CORS Extension
+1. Visit the Chrome Web Store.
+2. Search for "Allow CORS: Access-Control-Allow-Origin".
+3. Add the extension to your Chrome browser.
+4. Enable the extension when running the app.
 
+**Note:** This is a temporary solution for development purposes and should be used cautiously as it can have security implications.
+
+## Known Issues
 N/A
 
-## Developers:
-
-Maximilian Bosch https://github.com/Maximilian93B/Play-Date
-Ikechukwu Mbanugo https://github.com/imbanu1
-Stephanie Perroni https://github.com/fswDevSteph/Play-Date
+## Development Team
+- Maximilian Bosch: [GitHub](https://github.com/Maximilian93B/Play-Date)
+- Ikechukwu Mbanugo: [GitHub](https://github.com/imbanu1)
+- Stephanie Perroni: [GitHub](https://github.com/fswDevSteph/Play-Date)
